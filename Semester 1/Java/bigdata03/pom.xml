@@ -2,12 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>at.fhv.itm16.dgfh.bigdata</groupId>
-	<artifactId>bigdata02</artifactId>
-	<packaging>war</packaging>
+	<artifactId>bigdata03</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>bigdata02</name>
-	
-	
+	<packaging>war</packaging>
+	<name>bigdata03</name>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
@@ -15,7 +14,7 @@
 			<version>2.23.2</version>
 		</dependency>
 	</dependencies>
-	
+
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
