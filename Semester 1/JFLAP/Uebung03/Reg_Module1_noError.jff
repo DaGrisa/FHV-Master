@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 6.4.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>48.0</x>
+			<y>147.0</y>
+			<label>Start</label>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>177.0</x>
+			<y>37.0</y>
+			<label>P1-Rock</label>
+		</state>
+		<state id="2" name="q2">
+			<x>179.0</x>
+			<y>148.0</y>
+			<label>P1-Paper</label>
+		</state>
+		<state id="3" name="q3">
+			<x>178.0</x>
+			<y>262.0</y>
+			<label>P1-Scissors</label>
+		</state>
+		<state id="4" name="q4">
+			<x>394.0</x>
+			<y>31.0</y>
+			<label>P1-Wins</label>
+			<final/>
+		</state>
+		<state id="5" name="q5">
+			<x>470.0</x>
+			<y>149.0</y>
+			<label>P1-P2-Ties</label>
+			<final/>
+		</state>
+		<state id="6" name="q6">
+			<x>408.0</x>
+			<y>259.0</y>
+			<label>P2-Wins</label>
+			<final/>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>r</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>6</to>
+			<read>s</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>6</to>
+			<read>r</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>5</to>
+			<read>r</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>4</to>
+			<read>p</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>4</to>
+			<read>r</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>p</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>3</to>
+			<read>s</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>6</to>
+			<read>p</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>5</to>
+			<read>p</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>5</to>
+			<read>s</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>4</to>
+			<read>s</read>
+		</transition>
+	</automaton>
+</structure>

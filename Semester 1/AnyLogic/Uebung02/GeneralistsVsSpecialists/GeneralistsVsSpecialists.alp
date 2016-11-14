@@ -129,7 +129,7 @@
 					<X>720</X><Y>430</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>false</PresentationFlag>
+					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 						<Type><![CDATA[double]]></Type>
@@ -137,7 +137,8 @@
 						<NumericType><![CDATA[double]]></NumericType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.34]]></Code>
+							<Code><![CDATA[0.34
+]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1475837379186</Id>
