@@ -3,72 +3,68 @@
 	<automaton>
 		<!--The list of states.-->
 		<state id="0" name="q0">
-			<x>65.0</x>
-			<y>82.0</y>
+			<x>121.0</x>
+			<y>182.0</y>
 			<initial/>
 		</state>
 		<state id="1" name="q1">
-			<x>234.0</x>
-			<y>87.0</y>
+			<x>241.0</x>
+			<y>183.0</y>
 		</state>
-		<state id="2" name="q2">
-			<x>406.0</x>
-			<y>80.0</y>
+		<state id="4" name="q4">
+			<x>356.0</x>
+			<y>180.0</y>
 			<final/>
-		</state>
-		<state id="3" name="q3">
-			<x>237.0</x>
-			<y>214.0</y>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>a</read>
-			<pop>a</pop>
+			<pop/>
+			<push>a</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>b</read>
+			<pop/>
+			<push>b</push>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>4</to>
+			<read/>
+			<pop>Z</pop>
+			<push/>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>a</read>
+			<pop>b</pop>
 			<push/>
 		</transition>
 		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>b</read>
-			<pop>b</pop>
+			<pop>a</pop>
 			<push/>
 		</transition>
 		<transition>
 			<from>0</from>
 			<to>1</to>
-			<read/>
+			<read>b</read>
 			<pop>Z</pop>
-			<push>SZ</push>
+			<push>bZ</push>
 		</transition>
 		<transition>
-			<from>1</from>
+			<from>0</from>
 			<to>1</to>
-			<read/>
-			<pop>S</pop>
-			<push/>
-		</transition>
-		<transition>
-			<from>3</from>
-			<to>1</to>
-			<read/>
-			<pop>X</pop>
-			<push>aS</push>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>3</to>
-			<read/>
-			<pop>S</pop>
-			<push>Xb</push>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>2</to>
-			<read/>
+			<read>a</read>
 			<pop>Z</pop>
-			<push/>
+			<push>aZ</push>
 		</transition>
 	</automaton>
 </structure>
