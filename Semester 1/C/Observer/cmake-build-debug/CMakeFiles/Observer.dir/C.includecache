@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daniel/FHV-Master/Semester 1/C/Observer/main.c
+stdlib.h
+-
+stdio.h
+-
+observer.h
+/Users/daniel/FHV-Master/Semester 1/C/Observer/observer.h
+
+/Users/daniel/FHV-Master/Semester 1/C/Observer/observer.c
+stdlib.h
+-
+observer.h
+/Users/daniel/FHV-Master/Semester 1/C/Observer/observer.h
+
+/Users/daniel/FHV-Master/Semester 1/C/Observer/observer.h
+

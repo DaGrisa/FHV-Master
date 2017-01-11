@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daniel/FHV-Master/Semester 1/C/StackTemplate/Stack.h
+
+/Users/daniel/FHV-Master/Semester 1/C/StackTemplate/main.cpp
+iostream
+-
+Stack.h
+/Users/daniel/FHV-Master/Semester 1/C/StackTemplate/Stack.h
+

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daniel/FHV-Master/Semester 1/C/MemoryManagement/main.c
+stdio.h
+-
+mm.h
+/Users/daniel/FHV-Master/Semester 1/C/MemoryManagement/mm.h
+
+/Users/daniel/FHV-Master/Semester 1/C/MemoryManagement/mm.c
+stdint.h
+-
+stdio.h
+-
+
+/Users/daniel/FHV-Master/Semester 1/C/MemoryManagement/mm.h
+

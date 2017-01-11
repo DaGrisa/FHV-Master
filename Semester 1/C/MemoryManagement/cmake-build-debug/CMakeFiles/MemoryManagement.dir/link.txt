@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wall -Werror -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/MemoryManagement.dir/main.c.o CMakeFiles/MemoryManagement.dir/mm.c.o  -o MemoryManagement 
