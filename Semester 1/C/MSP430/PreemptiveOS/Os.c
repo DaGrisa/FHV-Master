@@ -13,64 +13,53 @@
 
 #define THREAD_ID_INVALID   -1
 
-#define THREAD_STATUS_READY  0
-#define THREAD_STATUS_RUN   1
-
 #define THREAD_MAIN_PRIORITY    10
 
-typedef int (*threadFunction)(int, int);
+typedef enum {OS_THREAD_STATUS_READY, OS_THREAD_STATUS_RUN} os_ThreadStatus;
 
-struct ProcessTableEntry {
+typedef int (*threadFunction)();
+
+struct os_ProcessTableEntry {
     int threadId;
-    // status of the process
-    // 0 = sleep
-    // 1 = run
-    int status;
-    // jump type?
-    // 0 = set jump
-    // 1 = long jump
+    os_ThreadStatus status;
     jmp_buf context;
-    // process priority
-    int priority;
-    // process function pointer
+    os_ThreadPriority priority;
     threadFunction function;
 };
 
-void registerNewProcess(struct ProcessTableEntry entry);
-
-void extendProcessTable();
+void os_registerNewProcess(struct os_ProcessTableEntry entry);
 
 // initialize process table with fixed size = 5
 int gNumberOfProcesses = 0;
-struct ProcessTableEntry gProcessTable[5];
+struct os_ProcessTableEntry gProcessTable[5];
 int gRunningThread = THREAD_ID_INVALID;
 
-void boot(void *pMainProcess) {
+void os_boot(void *pMainProcess) {
     // keep main process in process table with low priority
-    addProcess(pMainProcess, THREAD_MAIN_PRIORITY);
+    os_addProcess(pMainProcess, OS_THREAD_PRIORITY_LOW);
 }
 
-void addProcess(void *pProcessFunction, int priority) {
+void os_addProcess(void *pProcessFunction, os_ThreadPriority priority) {
     struct ProcessTableEntry processTableEntry;
-    processTableEntry.status = THREAD_STATUS_READY;
+    processTableEntry.status = OS_THREAD_STATUS_READY;
     processTableEntry.priority = priority;
     processTableEntry.function = pProcessFunction;
 
-    processTableEntry.threadId = registerNewProcess(processTableEntry);
-    startThread(processTableEntry);
+    processTableEntry.threadId = os_registerNewProcess(processTableEntry);
+    os_startThread(processTableEntry);
 }
 
-int registerNewProcess(struct ProcessTableEntry entry) {
+int os_registerNewProcess(struct os_ProcessTableEntry entry) {
     // check process table size
     if(gNumberOfProcesses == sizeof(gProcessTable)){
-        extendProcessTable();
+        os_extendProcessTable();
     }
     gProcessTable[gNumberOfProcesses] = entry;
     gNumberOfProcesses++;
     return gNumberOfProcesses-1;
 }
 
-int startThread(struct ProcessTableEntry processTableEntry) {
+int os_startThread(struct os_ProcessTableEntry processTableEntry) {
     ATOMIC_ON();
     if (setjmp(gProcessTable[processTableEntry.threadId].context) == 0) {
         // current context saved
@@ -78,7 +67,7 @@ int startThread(struct ProcessTableEntry processTableEntry) {
     } else {
         // running here as active Thread
         SP = allocate Stack (Pointer)
-        ATOMIC_END();
+        ATOMIC_OFF();
         gProcessTable[gRunningThread].function();
         killThread();
     }
