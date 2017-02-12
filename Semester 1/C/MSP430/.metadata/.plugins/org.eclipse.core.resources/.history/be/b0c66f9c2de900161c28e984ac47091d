@@ -1,0 +1,42 @@
+#include <msp430.h> 
+
+/*
+ * main.c
+ */
+void init(void);
+
+int main(void) {
+    WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
+    PM5CTL0 &= ~LOCKLPM5;
+
+    init();
+
+    while(1){
+    		// everything will work with interrupts
+    }
+}
+
+void init(void){
+	// enable interrupt on P1.1
+	P1IE |= BIT1; // enable interrupt
+	P1IES |= BIT1; // interrupt edge select (falling edge)
+	P1IFG &= ~BIT1; // reset interrupt flag
+	_enable_interrupts();
+
+	// set pullup-resistor P1.1
+	P1REN |= BIT1;
+	P1OUT |= BIT1;
+
+	// turn LED off
+	P1DIR |= BIT0;
+	P1OUT &= ~BIT0;
+}
+
+#pragma vector = PORT1_VECTOR
+__interrupt void port1_isr(){
+	P1IFG &= ~BIT1; // reset interrupt flag
+
+	// toggle LED and interrupt edge select
+	P1OUT ^= BIT0;
+	P1IES ^= BIT1;
+}

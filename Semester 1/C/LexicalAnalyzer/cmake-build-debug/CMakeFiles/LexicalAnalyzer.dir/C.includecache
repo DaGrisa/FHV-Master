@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daniel/ClionProjects/AphroCite/AphroCite.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/Users/daniel/FHV-Master/Semester 1/C/LexicalAnalyzer/LexicalAnalyzer.c
+../../../../ClionProjects/AphroCite/AphroCite.h
+/Users/daniel/ClionProjects/AphroCite/AphroCite.h
+

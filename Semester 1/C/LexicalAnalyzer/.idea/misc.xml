@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$USER_HOME$/FHV-Master/Semester 1/C/LexikalischerAnalysator" />
+  <component name="CidrRootsConfiguration">
+    <excludeRoots>
+      <file path="$USER_HOME$/FHV-Master/Semester 1/C/LexicalAnalyzer/cmake-build-debug/CMakeFiles" />
+      <file path="$USER_HOME$/FHV-Master/Semester 1/C/LexikalischerAnalysator/cmake-build-debug/CMakeFiles" />
+    </excludeRoots>
+  </component>
+</project>

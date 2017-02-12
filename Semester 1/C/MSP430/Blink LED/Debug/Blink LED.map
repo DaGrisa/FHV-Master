@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker Unix v15.12.3                  
 ******************************************************************************
->> Linked Fri Nov  4 12:15:46 2016
+>> Linked Wed Feb  1 16:10:30 2017
 
 OUTPUT FILE NAME:   <Blink LED.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_noexit"  address: 00004400

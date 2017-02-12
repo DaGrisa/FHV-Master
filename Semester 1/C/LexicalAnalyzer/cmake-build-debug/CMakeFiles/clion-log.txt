@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /Users/daniel/FHV-Master/Semester 1/C/LexikalischerAnalysator

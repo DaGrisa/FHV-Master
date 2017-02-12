@@ -1,0 +1,37 @@
+#include <msp430.h> 
+
+/*
+ * main.c
+ */
+void init(void);
+
+int main(void) {
+    WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
+    PM5CTL0 &= ~LOCKLPM5;
+
+    init();
+
+    while(1){
+    		// everything will work with interrupts
+    }
+	
+	return 0;
+}
+
+void init(void){
+	P1IE |= BIT1;
+	P1IES |= BIT1;
+	P1IFG &= ~BIT1;
+
+	P1REN |= BIT1;
+	P1OUT |= BIT1;
+
+	P1DIR |= BIT0;
+	P1OUT &= ~BIT0;
+}
+
+#pragma vector = PORT1_VECTOR
+__interrupt void port1_isr(){
+	P1IFG &= ~BIT1;
+	P1OUT |= BIT0;
+}

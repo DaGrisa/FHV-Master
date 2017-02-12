@@ -9,7 +9,7 @@ typedef struct {
     char message[256];
 } Message_t;
 
-typedef int (*NotifyFunction_t) (const Message_t message);
+typedef int (*NotifyFunction_t) (const Message_t* message);
 
 int observer_register(NotifyFunction_t observable);
 

@@ -1,1 +1,0 @@
-function [value] = TestFunction(y)  value = y * y;end 

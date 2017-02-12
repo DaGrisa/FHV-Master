@@ -1329,3 +1329,1373 @@ java.nio.channels.ClosedByInterruptException
 	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
 	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2017-01-26 09:57:56.511 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+
+!ENTRY com.ti.common.core 4 0 2017-01-26 09:57:58.566
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2017-01-26 09:57:58.567
+!MESSAGE debugServerDir=/Applications/ti/ccsv6/ccs_base/DebugServer
+
+!ENTRY org.eclipse.core.net 1 0 2017-01-26 09:58:09.254
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 09:58:14.635
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.rovsupport' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 09:58:14.648
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 09:58:14.679
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.uia.sessionmgr.view' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 09:58:14.687
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.util.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.equinox.p2.updatechecker 4 0 2017-01-26 09:58:25.449
+!MESSAGE Exception in update check thread
+!STACK 0
+org.eclipse.core.runtime.OperationCanceledException
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:735)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:657)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-01-26 09:58:25.453
+!MESSAGE An internal error occurred during: "Replace IU Job".
+!STACK 0
+java.lang.NullPointerException
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter.log(CCSAppCenter.java:452)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter._replaceIusWithLatest(CCSAppCenter.java:420)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter.access$3(CCSAppCenter.java:364)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter$2.run(CCSAppCenter.java:240)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-01-26 17:45:13.567 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+
+!ENTRY com.ti.common.core 4 0 2017-01-26 17:45:20.588
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2017-01-26 17:45:20.589
+!MESSAGE debugServerDir=/Applications/ti/ccsv6/ccs_base/DebugServer
+
+!ENTRY org.eclipse.core.net 1 0 2017-01-26 17:45:30.950
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 17:45:37.137
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.rovsupport' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 17:45:37.150
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 17:45:37.174
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.uia.sessionmgr.view' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 17:45:37.178
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.util.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+!SESSION 2017-01-26 20:21:20.421 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+
+!ENTRY com.ti.common.core 4 0 2017-01-26 20:21:27.723
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2017-01-26 20:21:27.725
+!MESSAGE debugServerDir=/Applications/ti/ccsv6/ccs_base/DebugServer
+
+!ENTRY org.eclipse.core.net 1 0 2017-01-26 20:21:38.319
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 20:21:44.575
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.rovsupport' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 20:21:44.589
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 20:21:44.613
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.uia.sessionmgr.view' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-26 20:21:44.618
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.util.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.equinox.event 4 0 2017-01-26 20:21:45.205
+!MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/application/ApplicationElement/tags/REMOVE] {ChangedElement=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@463561c5 (elementId: left, tags: [], contributorURI: null) (widget: CTabFolder {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@3d98729a, toBeRendered: true, onTop: false, visible: true, containerData: 5000, accessibilityPhrase: null), Widget=CTabFolder {}, AttName=tags, EventType=REMOVE, Position=0, OldValue=Minimized} to handler org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler@5c452eb5
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.IllegalArgumentException: 
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:56)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:186)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4781)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:53)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:85)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.remove(NotifyingListImpl.java:725)
+	at org.eclipse.emf.common.util.AbstractEList.remove(AbstractEList.java:462)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.unzoom(MinMaxAddon.java:820)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.subscribeTopicTagsChanged(MinMaxAddon.java:372)
+	at sun.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:56)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:186)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4781)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:53)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:85)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.remove(NotifyingListImpl.java:725)
+	at org.eclipse.emf.common.util.AbstractEList.remove(AbstractEList.java:462)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.setState(MinMaxAddon.java:195)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.access$1(MinMaxAddon.java:186)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon$2.mouseDoubleClick(MinMaxAddon.java:180)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:196)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4230)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1491)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1514)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1499)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1299)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4072)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3698)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:47)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:142)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:312)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:298)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.getActivePerspective(ModelServiceImpl.java:825)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.getElementsToRestore(MinMaxAddon.java:835)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.restore(MinMaxAddon.java:634)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.subscribeTopicTagsChanged(MinMaxAddon.java:370)
+	at sun.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	... 79 more
+
+!ENTRY org.eclipse.equinox.event 4 0 2017-01-26 20:21:45.228
+!MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/application/ApplicationElement/tags/REMOVE] {ChangedElement=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@6bc24e72 (elementId: bottomRight, tags: [], contributorURI: null) (widget: CTabFolder {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@3d98729a, toBeRendered: true, onTop: false, visible: true, containerData: 5000, accessibilityPhrase: null), Widget=CTabFolder {}, AttName=tags, EventType=REMOVE, Position=0, OldValue=Minimized} to handler org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler@5c452eb5
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.IllegalArgumentException: 
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:56)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:186)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4781)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:53)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:85)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.remove(NotifyingListImpl.java:725)
+	at org.eclipse.emf.common.util.AbstractEList.remove(AbstractEList.java:462)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.unzoom(MinMaxAddon.java:820)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.subscribeTopicTagsChanged(MinMaxAddon.java:372)
+	at sun.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:56)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:186)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4781)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:53)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:85)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.remove(NotifyingListImpl.java:725)
+	at org.eclipse.emf.common.util.AbstractEList.remove(AbstractEList.java:462)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.setState(MinMaxAddon.java:195)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.access$1(MinMaxAddon.java:186)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon$2.mouseDoubleClick(MinMaxAddon.java:180)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:196)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4230)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1491)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1514)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1499)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1299)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4072)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3698)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:47)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:142)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:312)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:298)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.getActivePerspective(ModelServiceImpl.java:825)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.getElementsToRestore(MinMaxAddon.java:835)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.restore(MinMaxAddon.java:634)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.subscribeTopicTagsChanged(MinMaxAddon.java:370)
+	at sun.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	... 79 more
+!SESSION 2017-01-27 14:22:39.934 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+
+!ENTRY com.ti.common.core 4 0 2017-01-27 14:22:42.325
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2017-01-27 14:22:42.326
+!MESSAGE debugServerDir=/Applications/ti/ccsv6/ccs_base/DebugServer
+
+!ENTRY org.eclipse.core.net 1 0 2017-01-27 14:22:54.488
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2017-01-27 14:22:58.083
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.rovsupport' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-27 14:22:58.100
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-27 14:22:58.137
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.uia.sessionmgr.view' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-01-27 14:22:58.145
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.util.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-27 14:24:34.584
+!MESSAGE Indexed 'Geschwindigkeitsmessung' (0 sources, 0 headers) in 0,003 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-27 14:26:08.608
+!MESSAGE Indexed 'Geschwindigkeitsmessung' (1 sources, 0 headers) in 0,086 sec: 2 declarations; 0 references; 1 unresolved inclusions; 0 syntax errors; 3 unresolved names (60 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-27 14:26:09.997
+!MESSAGE Indexed 'Geschwindigkeitsmessung' (1 sources, 5 headers) in 0,899 sec: 1.469 declarations; 2.007 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-01-27 14:26:10.584
+!MESSAGE Indexed 'Geschwindigkeitsmessung' (1 sources, 5 headers) in 0,418 sec: 1.489 declarations; 2.007 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-02-01 15:57:59.960 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+
+!ENTRY com.ti.common.core 4 0 2017-02-01 15:58:07.034
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2017-02-01 15:58:07.035
+!MESSAGE debugServerDir=/Applications/ti/ccsv6/ccs_base/DebugServer
+
+!ENTRY org.eclipse.core.net 1 0 2017-02-01 15:58:16.897
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2017-02-01 15:58:20.851
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.rovsupport' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-02-01 15:58:20.873
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-02-01 15:58:20.901
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.uia.sessionmgr.view' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-02-01 15:58:20.905
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.util.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-01 16:00:32.767
+!MESSAGE Indexed 'Blink LED' (1 sources, 5 headers) in 1,21 sec: 1.490 declarations; 2.016 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.jface 2 0 2017-02-01 16:00:46.279
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-02-01 16:00:46.279
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.reloadProgram,Reload Program,
+		Reload program for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5d202dc4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@473dbad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,cocoa,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-02-01 16:00:46.279
+!MESSAGE A conflict occurred for ALT+COMMAND+L:
+Binding(ALT+COMMAND+L,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.loadProgram,Load Program...,
+		Load program onto selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1bb51492,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+COMMAND+L,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.local.variable,Extract Local Variable - Refactoring ,
+		Extracts a local variable for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2447e2e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,cocoa,system)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-01 16:11:32.629
+!MESSAGE Indexed 'Button LED' (1 sources, 5 headers) in 0,543 sec: 1.494 declarations; 2.064 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.ui 4 0 2017-02-01 16:49:14.985
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.swt.widgets.Control.internal_new_GC(Control.java:2124)
+	at org.eclipse.swt.graphics.GC.cocoa_new(GC.java:210)
+	at org.eclipse.swt.widgets.Tree.sendMeasureItem(Tree.java:2596)
+	at org.eclipse.swt.widgets.Tree.cellSize(Tree.java:288)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5582)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper_stret(Native Method)
+	at org.eclipse.swt.widgets.Widget.expansionFrameWithFrame_inView(Widget.java:814)
+	at org.eclipse.swt.widgets.Tree.expansionFrameWithFrame_inView(Tree.java:1274)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5961)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend_bool(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSRunLoop.runMode(NSRunLoop.java:42)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:4740)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:368)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:858)
+	at org.eclipse.ui.internal.Workbench$3.eventLoopIdle(Workbench.java:517)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1132)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-01 17:30:10.367
+!MESSAGE Indexed 'Dimm LED' (1 sources, 0 headers) in 0,013 sec: 2 declarations; 0 references; 1 unresolved inclusions; 0 syntax errors; 3 unresolved names (60 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-01 17:30:11.545
+!MESSAGE Indexed 'Dimm LED' (1 sources, 5 headers) in 0,468 sec: 1.469 declarations; 2.007 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-01 17:30:12.327
+!MESSAGE Indexed 'Dimm LED' (1 sources, 5 headers) in 0,35 sec: 1.489 declarations; 2.007 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.ui 4 0 2017-02-01 17:30:14.706
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.swt.widgets.Control.internal_new_GC(Control.java:2124)
+	at org.eclipse.swt.graphics.GC.cocoa_new(GC.java:210)
+	at org.eclipse.swt.widgets.Tree.sendMeasureItem(Tree.java:2596)
+	at org.eclipse.swt.widgets.Tree.cellSize(Tree.java:288)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5582)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper_stret(Native Method)
+	at org.eclipse.swt.widgets.Widget.expansionFrameWithFrame_inView(Widget.java:814)
+	at org.eclipse.swt.widgets.Tree.expansionFrameWithFrame_inView(Tree.java:1274)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5961)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend_bool(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSRunLoop.runMode(NSRunLoop.java:42)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:4740)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:368)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:858)
+	at org.eclipse.ui.internal.Workbench$3.eventLoopIdle(Workbench.java:517)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1132)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2017-02-01 18:34:34.644
+!MESSAGE DS_ERROR: MSP430: JTAG Communication Error 
+
+!SESSION 2017-02-02 09:42:23.347 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+
+!ENTRY com.ti.common.core 4 0 2017-02-02 09:42:25.342
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2017-02-02 09:42:25.343
+!MESSAGE debugServerDir=/Applications/ti/ccsv6/ccs_base/DebugServer
+
+!ENTRY org.eclipse.core.net 1 0 2017-02-02 09:42:38.476
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2017-02-02 09:42:41.341
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.rovsupport' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-02-02 09:42:41.354
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-02-02 09:42:41.385
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.uia.sessionmgr.view' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-02-02 09:42:41.394
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.util.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-02 09:47:17.181
+!MESSAGE Indexed 'Morse LED' (1 sources, 0 headers) in 0,089 sec: 2 declarations; 0 references; 1 unresolved inclusions; 0 syntax errors; 3 unresolved names (60 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-02 09:47:19.462
+!MESSAGE Indexed 'Morse LED' (1 sources, 5 headers) in 0,428 sec: 1.489 declarations; 2.007 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.jface 2 0 2017-02-02 09:54:55.458
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-02-02 09:54:55.458
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.reloadProgram,Reload Program,
+		Reload program for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@22b10124,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c6062bd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,cocoa,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-02-02 09:54:55.458
+!MESSAGE A conflict occurred for ALT+COMMAND+L:
+Binding(ALT+COMMAND+L,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.loadProgram,Load Program...,
+		Load program onto selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5d202dc4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+COMMAND+L,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.local.variable,Extract Local Variable - Refactoring ,
+		Extracts a local variable for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6270fadb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,cocoa,system)
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 10:33:53.084
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.position(FileChannelImpl.java:293)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.nextChunk(FileCharArray.java:141)
+	at org.eclipse.cdt.internal.core.parser.scanner.LazyCharArray.createChunk(LazyCharArray.java:145)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.createChunk(FileCharArray.java:110)
+	at org.eclipse.cdt.internal.core.parser.scanner.LazyCharArray.getChunkByNumber(LazyCharArray.java:136)
+	at org.eclipse.cdt.internal.core.parser.scanner.LazyCharArray.getChunkForOffset(LazyCharArray.java:117)
+	at org.eclipse.cdt.internal.core.parser.scanner.LazyCharArray.isValidOffset(LazyCharArray.java:72)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.isValidOffset(Lexer.java:131)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.nextCharPhase3(Lexer.java:1087)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.identifier(Lexer.java:967)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.fetchToken(Lexer.java:365)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.nextDirective(Lexer.java:245)
+	at org.eclipse.cdt.internal.core.parser.scanner.IncludeGuardDetection.currentIfSpansFile(IncludeGuardDetection.java:97)
+	at org.eclipse.cdt.internal.core.parser.scanner.IncludeGuardDetection.detectIncludeGuard(IncludeGuardDetection.java:29)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.detectIncludeGuard(CPreprocessor.java:336)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1627)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 10:33:53.086
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:315)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:240)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:223)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:129)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:121)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:37)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:164)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1200)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1578)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 10:33:53.087
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:315)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:240)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:223)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:129)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:121)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:37)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:164)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1231)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1578)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 10:33:53.088
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:315)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:240)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:223)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:129)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:121)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:37)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:164)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1231)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1578)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2017-02-02 10:57:10.250
+!MESSAGE Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.service.BreakpointService$7$1$1@4137947): Status ERROR: com.ti.ccstudio.debug code=10004 EEM module not accessible while running in Ultra Low Power Debug Mode - Deactivate Ultra Low Power Debug mode to enable this feature com.ti.debug.engine.IBreakpointManager$BreakpointException: EEM module not accessible while running in Ultra Low Power Debug Mode - Deactivate Ultra Low Power Debug mode to enable this feature' resulted in an error.
+!SUBENTRY 1 com.ti.ccstudio.debug 4 10004 2017-02-02 10:57:10.250
+!MESSAGE EEM module not accessible while running in Ultra Low Power Debug Mode - Deactivate Ultra Low Power Debug mode to enable this feature
+!STACK 0
+com.ti.debug.engine.IBreakpointManager$BreakpointException: EEM module not accessible while running in Ultra Low Power Debug Mode - Deactivate Ultra Low Power Debug mode to enable this feature
+	at com.ti.debug.engine.impl.BreakpointManager.checkForException(BreakpointManager.java:60)
+	at com.ti.debug.engine.impl.BreakpointManager.enable(BreakpointManager.java:115)
+	at com.ti.ccstudio.debug.service.contexts.BreakpointManagerDMContext.dsEnabled(BreakpointManagerDMContext.java:718)
+	at com.ti.ccstudio.debug.service.contexts.BreakpointManagerDMContext.insertBreakpoint(BreakpointManagerDMContext.java:351)
+	at com.ti.ccstudio.debug.service.contexts.BreakpointManagerDMContext.insertBreakpoint(BreakpointManagerDMContext.java:315)
+	at com.ti.ccstudio.debug.service.BreakpointService.insertBreakpoint(BreakpointService.java:455)
+	at com.ti.ccstudio.debug.service.BreakpointService$7$1.handleCompleted(BreakpointService.java:577)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2017-02-02 12:08:20.370
+!MESSAGE DS_ERROR: MSP430: JTAG Communication Error 
+
+
+!ENTRY org.eclipse.core.resources 2 566 2017-02-02 13:52:56.077
+!MESSAGE null parent found while collapsing trees
+
+!ENTRY org.eclipse.core.resources 2 566 2017-02-02 14:10:47.788
+!MESSAGE null parent found while collapsing trees
+
+!ENTRY org.eclipse.core.resources 2 566 2017-02-02 14:16:16.175
+!MESSAGE null parent found while collapsing trees
+
+!ENTRY org.eclipse.ui.ide 4 4 2017-02-02 14:27:25.102
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2017-02-02 14:27:25.104
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2017-02-02 14:27:25.104
+!MESSAGE Could not write workspace metadata '/Users/daniel/FHV-Master/Semester 1/C/MSP430/.metadata/.plugins/org.eclipse.core.resources/.root/12.tree'.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.core.internal.watson.ElementTreeWriter.sortTrees(ElementTreeWriter.java:123)
+	at org.eclipse.core.internal.watson.ElementTreeWriter.writeDeltaChain(ElementTreeWriter.java:193)
+	at org.eclipse.core.internal.resources.SaveManager.writeTree(SaveManager.java:2012)
+	at org.eclipse.core.internal.resources.SaveManager.saveTree(SaveManager.java:1409)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1188)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2270)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:453)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.core.resources 2 566 2017-02-02 14:27:25.434
+!MESSAGE null parent found while collapsing trees
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-02-02 14:27:25.435
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2017-02-02 16:22:47.685 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.ti.ccstudio.branding.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-02-02 16:22:54.310
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.ti.common.core 4 0 2017-02-02 16:22:54.346
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2017-02-02 16:22:54.347
+!MESSAGE debugServerDir=/Applications/ti/ccsv6/ccs_base/DebugServer
+
+!ENTRY org.eclipse.core.net 1 0 2017-02-02 16:23:03.520
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2017-02-02 16:23:09.827
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.rovsupport' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-02-02 16:23:09.839
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-02-02 16:23:09.867
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.uia.sessionmgr.view' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2017-02-02 16:23:09.875
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.util.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-02 16:27:12.770
+!MESSAGE Indexed 'Morse LED' (1 sources, 5 headers) in 0,58 sec: 1.513 declarations; 2.132 references; 0 unresolved inclusions; 3 syntax errors; 4 unresolved names (0,11 %)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2017-02-02 16:31:14.406
+!MESSAGE DS_ERROR: MSP430: GEL: Encountered a problem loading file: /Users/daniel/FHV-Master/Semester 1/C/MSP430/Morse LED/Debug/Morse LED.out Could not open file
+
+
+!ENTRY org.eclipse.ui 4 0 2017-02-02 16:33:31.641
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.swt.widgets.Control.internal_new_GC(Control.java:2124)
+	at org.eclipse.swt.graphics.GC.cocoa_new(GC.java:210)
+	at org.eclipse.swt.widgets.Tree.sendMeasureItem(Tree.java:2596)
+	at org.eclipse.swt.widgets.Tree.cellSize(Tree.java:288)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5582)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper_stret(Native Method)
+	at org.eclipse.swt.widgets.Widget.expansionFrameWithFrame_inView(Widget.java:814)
+	at org.eclipse.swt.widgets.Tree.expansionFrameWithFrame_inView(Tree.java:1274)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5961)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend_bool(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSRunLoop.runMode(NSRunLoop.java:42)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:4740)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:368)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:858)
+	at org.eclipse.ui.internal.Workbench$3.eventLoopIdle(Workbench.java:517)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1132)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2017-02-02 16:36:23.558
+!MESSAGE DS_ERROR: MSP430: GEL: Encountered a problem loading file: /Users/daniel/FHV-Master/Semester 1/C/MSP430/Morse LED/Debug/Morse LED.out Could not open file
+
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 16:38:00.171
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.position(FileChannelImpl.java:293)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.nextChunk(FileCharArray.java:141)
+	at org.eclipse.cdt.internal.core.parser.scanner.LazyCharArray.createChunk(LazyCharArray.java:145)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.createChunk(FileCharArray.java:110)
+	at org.eclipse.cdt.internal.core.parser.scanner.LazyCharArray.getChunkByNumber(LazyCharArray.java:136)
+	at org.eclipse.cdt.internal.core.parser.scanner.LazyCharArray.getChunkForOffset(LazyCharArray.java:117)
+	at org.eclipse.cdt.internal.core.parser.scanner.LazyCharArray.isValidOffset(LazyCharArray.java:72)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.isValidOffset(Lexer.java:131)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.nextCharPhase3(Lexer.java:1087)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.fetchToken(Lexer.java:266)
+	at org.eclipse.cdt.internal.core.parser.scanner.Lexer.nextDirective(Lexer.java:245)
+	at org.eclipse.cdt.internal.core.parser.scanner.IncludeGuardDetection.currentIfSpansFile(IncludeGuardDetection.java:97)
+	at org.eclipse.cdt.internal.core.parser.scanner.IncludeGuardDetection.detectIncludeGuard(IncludeGuardDetection.java:29)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.detectIncludeGuard(CPreprocessor.java:336)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1627)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 16:38:00.173
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:315)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:240)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:223)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:129)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:121)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:37)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:164)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1200)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1578)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 16:38:00.174
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:315)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:240)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:223)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:129)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:121)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:37)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:164)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1231)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1578)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 16:38:00.176
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:315)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:240)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:223)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:129)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:121)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:37)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:164)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1231)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1578)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.ui 4 0 2017-02-02 16:38:33.640
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.swt.widgets.Control.internal_new_GC(Control.java:2124)
+	at org.eclipse.swt.graphics.GC.cocoa_new(GC.java:210)
+	at org.eclipse.swt.widgets.Tree.sendMeasureItem(Tree.java:2596)
+	at org.eclipse.swt.widgets.Tree.cellSize(Tree.java:288)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5582)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper_stret(Native Method)
+	at org.eclipse.swt.widgets.Widget.expansionFrameWithFrame_inView(Widget.java:814)
+	at org.eclipse.swt.widgets.Tree.expansionFrameWithFrame_inView(Tree.java:1274)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5961)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend_bool(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSRunLoop.runMode(NSRunLoop.java:42)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:4740)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:368)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:858)
+	at org.eclipse.ui.internal.Workbench$3.eventLoopIdle(Workbench.java:517)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1132)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.jface 2 0 2017-02-02 16:38:57.256
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-02-02 16:38:57.256
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.reloadProgram,Reload Program,
+		Reload program for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6bfdaed7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@af9f43d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,cocoa,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-02-02 16:38:57.256
+!MESSAGE A conflict occurred for ALT+COMMAND+L:
+Binding(ALT+COMMAND+L,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.loadProgram,Load Program...,
+		Load program onto selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@33a7331,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+COMMAND+L,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.local.variable,Extract Local Variable - Refactoring ,
+		Extracts a local variable for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f6cf329,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,cocoa,system)
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 16:42:41.779
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:315)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:240)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:223)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:129)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:121)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:37)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:164)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1231)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1578)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-02 16:42:45.097
+!MESSAGE Error
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:315)
+	at org.eclipse.cdt.internal.core.parser.scanner.FileCharArray.create(FileCharArray.java:44)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createFileContent(InternalParserUtil.java:240)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createExternalFileContent(InternalParserUtil.java:223)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:129)
+	at org.eclipse.cdt.core.parser.FileContent.createForExternalFileLocation(FileContent.java:121)
+	at org.eclipse.cdt.internal.core.parser.SavedFilesProvider.getContentForInclusion(SavedFilesProvider.java:37)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:164)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor$1.checkFile(CPreprocessor.java:1)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.findInclusion(CPreprocessor.java:1231)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeInclude(CPreprocessor.java:1578)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.executeDirective(CPreprocessor.java:1354)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.internalFetchToken(CPreprocessor.java:942)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.fetchToken(CPreprocessor.java:641)
+	at org.eclipse.cdt.internal.core.parser.scanner.CPreprocessor.nextToken(CPreprocessor.java:738)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.fetchToken(AbstractGNUSourceCodeParser.java:278)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.nextToken(AbstractGNUSourceCodeParser.java:302)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.acceptInactiveCodeBoundary(AbstractGNUSourceCodeParser.java:363)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1333)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1306)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1301)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:658)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getASTTranslationUnit(AbstractCLikeLanguage.java:167)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:876)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:826)
+	at sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionSummaries(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.rtsc.xdctools.ui.contentassist.RTSCHelpProvider.getFunctionInfo(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CHelpSettings.getFunctionInfo(CHelpSettings.java:121)
+	at org.eclipse.cdt.internal.ui.CHelpProviderManager.getFunctionInfo(CHelpProviderManager.java:163)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CDocHover.getHoverInfo(CDocHover.java:86)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractCEditorTextHover.getHoverInfo2(AbstractCEditorTextHover.java:84)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.debug.core 4 2 2017-02-02 16:43:54.131
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.getToolChain(Configuration.java:1014)
+	at com.ti.common.project.core.util.CTIProjectCoreUtils.getBuildArtifactLocation(CTIProjectCoreUtils.java:239)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.findBuildArtifactOwner(ProjectCoreUtils.java:145)
+	at com.ti.ccstudio.debug.sourcelookup.CCSSourceLookupDirector.getLibrarySoruceFolder(CCSSourceLookupDirector.java:460)
+	at com.ti.ccstudio.debug.sourcelookup.CCSLibrarySourceContainer.findSourceElementsFromContext(CCSLibrarySourceContainer.java:54)
+	at com.ti.ccstudio.debug.sourcelookup.CPUSpecificContainer.findSourceElementsFromContext(CPUSpecificContainer.java:118)
+	at com.ti.ccstudio.debug.sourcelookup.CCSRelativeSourceLookupParticipant.findSourceElements(CCSRelativeSourceLookupParticipant.java:115)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at com.ti.ccstudio.debug.sourcelookup.CCSSourceLookupDirector.getSourceElement(CCSSourceLookupDirector.java:207)
+	at com.ti.ccstudio.debug.sourcelookup.CCSDsfSourceLookupDirector.getSourceElement(CCSDsfSourceLookupDirector.java:85)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.performLookup(DsfSourceDisplayAdapter.java:203)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.run(DsfSourceDisplayAdapter.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 125 2017-02-02 16:43:54.132
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.getToolChain(Configuration.java:1014)
+	at com.ti.common.project.core.util.CTIProjectCoreUtils.getBuildArtifactLocation(CTIProjectCoreUtils.java:239)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.findBuildArtifactOwner(ProjectCoreUtils.java:145)
+	at com.ti.ccstudio.debug.sourcelookup.CCSSourceLookupDirector.getLibrarySoruceFolder(CCSSourceLookupDirector.java:460)
+	at com.ti.ccstudio.debug.sourcelookup.CCSLibrarySourceContainer.findSourceElementsFromContext(CCSLibrarySourceContainer.java:54)
+	at com.ti.ccstudio.debug.sourcelookup.CPUSpecificContainer.findSourceElementsFromContext(CPUSpecificContainer.java:118)
+	at com.ti.ccstudio.debug.sourcelookup.CCSRelativeSourceLookupParticipant.findSourceElements(CCSRelativeSourceLookupParticipant.java:115)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at com.ti.ccstudio.debug.sourcelookup.CCSSourceLookupDirector.getSourceElement(CCSSourceLookupDirector.java:207)
+	at com.ti.ccstudio.debug.sourcelookup.CCSDsfSourceLookupDirector.getSourceElement(CCSDsfSourceLookupDirector.java:85)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.performLookup(DsfSourceDisplayAdapter.java:203)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.run(DsfSourceDisplayAdapter.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

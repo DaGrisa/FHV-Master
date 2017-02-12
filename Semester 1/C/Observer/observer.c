@@ -7,8 +7,8 @@
 
 #define OBSERVER_SIZE 10
 
-int actualObserverPosition = 0;
-NotifyFunction_t observables[OBSERVER_SIZE];
+static int actualObserverPosition = 0;
+static NotifyFunction_t observables[OBSERVER_SIZE];
 
 int observer_register(NotifyFunction_t observable) {
     if(actualObserverPosition < OBSERVER_SIZE){
@@ -21,6 +21,6 @@ int observer_register(NotifyFunction_t observable) {
 
 void observer_notifyAll(const Message_t *message) {
     for(int i = 0; i < actualObserverPosition; i++){
-        observables[i](*message);
+        observables[i](message);
     }
 }

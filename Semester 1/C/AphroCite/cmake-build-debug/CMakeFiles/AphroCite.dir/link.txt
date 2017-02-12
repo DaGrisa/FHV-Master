@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/cc   -Wall -Werror -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/AphroCite.dir/AphroCiteTest.c.o  -o AphroCite 

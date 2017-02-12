@@ -1,3 +1,0 @@
-/Users/daniel/FHV-Master/Semester 1/C/AphroCite/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/daniel/FHV-Master/Semester 1/C/AphroCite/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/daniel/FHV-Master/Semester 1/C/AphroCite/cmake-build-debug/CMakeFiles/AphroCite.dir

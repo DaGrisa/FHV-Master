@@ -1,0 +1,56 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daniel/ClionProjects/AphroCite/AphroCite.h
+stdio.h
+-
+stdlib.h
+-
+stdarg.h
+-
+string.h
+-
+
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/ByteArrayInputStream.c
+stdlib.h
+-
+ByteArrayInputStream.h
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/ByteArrayInputStream.h
+InputStream.h
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/InputStream.h
+
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/ByteArrayInputStream.h
+InputStream.h
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/InputStream.h
+
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/InputStream.h
+
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/UpperCaseInputStream.c
+ctype.h
+-
+stdlib.h
+-
+UpperCaseInputStream.h
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/UpperCaseInputStream.h
+InputStream.h
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/InputStream.h
+
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/UpperCaseInputStream.h
+InputStream.h
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/InputStream.h
+
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/main.c
+../../../../ClionProjects/AphroCite/AphroCite.h
+/Users/daniel/ClionProjects/AphroCite/AphroCite.h
+ByteArrayInputStream.h
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/ByteArrayInputStream.h
+UpperCaseInputStream.h
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/UpperCaseInputStream.h
+InputStream.h
+/Users/daniel/FHV-Master/Semester 1/C/InputStreamerLibrary/InputStream.h
+

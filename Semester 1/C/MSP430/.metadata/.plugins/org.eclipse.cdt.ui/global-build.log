@@ -1,27 +1,27 @@
 
-**** Clean-only build of configuration Debug for project Button LED ****
-
-/Applications/ti/ccsv6/utils/bin/gmake -k clean 
-rm -rf  "Button LED.hex"  "Button LED.out" 
-rm -rf "main.obj" 
-rm -rf "main.d" 
-Finished clean
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project Button LED ****
+**** Build of configuration Debug for project Morse LED ****
 
 /Applications/ti/ccsv6/utils/bin/gmake -k all 
 Building file: ../main.c
 Invoking: MSP430 Compiler
 "/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
-"../main.c", line 28: remark #1534-D: (ULP 7.1) Detected use of global variable "counter" within one function "timer_interrupt". Recommend placing variable in the function locally
+"../main.c", line 30: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 71: remark #1538-D: (ULP 10.1) ISR port1_isr calls function stopMsTimer. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 72: remark #2553-D: (ULP 14.1) Array index (involving "symbolsIndex") of type "int". Recommend using "unsigned int"
+"../main.c", line 72: remark #1538-D: (ULP 10.1) ISR port1_isr calls function getSymbolFromMilliSeconds. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 81: remark #1538-D: (ULP 10.1) ISR port1_isr calls function startMsTimer. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 116: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 117: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 22: remark #1535-D: (ULP 8.1) variable "exercise" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../main.c", line 116 (col. 31): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 117 (col. 40): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 119 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 121 (col. 18): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 Finished building: ../main.c
  
-Building target: Button LED.out
+Building target: Morse LED.out
 Invoking: MSP430 Linker
-"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal -z -m"Button LED.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/FR59xx" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/lib" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --reread_libs --priority --display_error_number --warn_sections --diag_wrap=off --xml_link_info="Button LED_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Button LED.out" "./main.obj" "../lnk_msp430fr6989.cmd"  -llibmath.a -llibc.a 
+"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal -z -m"Morse LED.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/FR59xx" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/lib" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --reread_libs --priority --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Morse LED_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Morse LED.out" "./main.obj" "../lnk_msp430fr6989.cmd"  -llibmath.a -llibc.a 
 <Linking>
 remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
 remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
@@ -29,30 +29,48 @@ remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recomm
 remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-Finished building target: Button LED.out
+Finished building target: Morse LED.out
  
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project Button LED ****
+**** Build of configuration Debug for project Morse LED ****
 
 /Applications/ti/ccsv6/utils/bin/gmake -k all 
 gmake: Nothing to be done for 'all'.
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project Button LED ****
+**** Build of configuration Debug for project Morse LED ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Morse LED ****
 
 /Applications/ti/ccsv6/utils/bin/gmake -k all 
 Building file: ../main.c
 Invoking: MSP430 Compiler
 "/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
-"../main.c", line 30: remark #1534-D: (ULP 7.1) Detected use of global variable "counter" within one function "timer_interrupt". Recommend placing variable in the function locally
+"../main.c", line 30: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 71: remark #1538-D: (ULP 10.1) ISR port1_isr calls function startMsTimer. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 73: remark #1538-D: (ULP 10.1) ISR port1_isr calls function stopMsTimer. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 74: remark #2553-D: (ULP 14.1) Array index (involving "symbolsIndex") of type "int". Recommend using "unsigned int"
+"../main.c", line 74: remark #1538-D: (ULP 10.1) ISR port1_isr calls function getSymbolFromMilliSeconds. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 116: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 117: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 22: remark #1535-D: (ULP 8.1) variable "exercise" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../main.c", line 116 (col. 31): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 117 (col. 40): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 119 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 121 (col. 18): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 Finished building: ../main.c
  
-Building target: Button LED.out
+Building target: Morse LED.out
 Invoking: MSP430 Linker
-"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal -z -m"Button LED.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/FR59xx" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/lib" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --reread_libs --priority --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Button LED_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Button LED.out" "./main.obj" "../lnk_msp430fr6989.cmd"  -llibmath.a -llibc.a 
+"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal -z -m"Morse LED.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/FR59xx" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/lib" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --reread_libs --priority --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Morse LED_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Morse LED.out" "./main.obj" "../lnk_msp430fr6989.cmd"  -llibmath.a -llibc.a 
 <Linking>
 remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
 remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
@@ -60,60 +78,26 @@ remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recomm
 remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-Finished building target: Button LED.out
+Finished building target: Morse LED.out
  
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project Button LED ****
+**** Build of configuration Debug for project Morse LED ****
 
 /Applications/ti/ccsv6/utils/bin/gmake -k all 
-Building file: ../main.c
-Invoking: MSP430 Compiler
-"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
-"../main.c", line 30: remark #1534-D: (ULP 7.1) Detected use of global variable "counter" within one function "timer_interrupt". Recommend placing variable in the function locally
-Finished building: ../main.c
- 
-Building target: Button LED.out
-Invoking: MSP430 Linker
-"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal -z -m"Button LED.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/FR59xx" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/lib" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --reread_libs --priority --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Button LED_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Button LED.out" "./main.obj" "../lnk_msp430fr6989.cmd"  -llibmath.a -llibc.a 
-<Linking>
-remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
-remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-Finished building target: Button LED.out
- 
+gmake: Nothing to be done for 'all'.
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project Button LED ****
+**** Build of configuration Debug for project Morse LED ****
 
 /Applications/ti/ccsv6/utils/bin/gmake -k all 
-Building file: ../main.c
-Invoking: MSP430 Compiler
-"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
-"../main.c", line 30: remark #1534-D: (ULP 7.1) Detected use of global variable "counter" within one function "timer_interrupt". Recommend placing variable in the function locally
-Finished building: ../main.c
- 
-Building target: Button LED.out
-Invoking: MSP430 Linker
-"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all -g --define=__MSP430FR6989__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --printf_support=minimal -z -m"Button LED.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/FR59xx" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/lib" -i"/Applications/ti/ccsv6/tools/compiler/msp430_15.12.3.LTS/include" --reread_libs --priority --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Button LED_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Button LED.out" "./main.obj" "../lnk_msp430fr6989.cmd"  -llibmath.a -llibc.a 
-<Linking>
-remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
-remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port E in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-Finished building target: Button LED.out
- 
+gmake: Nothing to be done for 'all'.
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project Button LED ****
+**** Build of configuration Debug for project Morse LED ****
 
 /Applications/ti/ccsv6/utils/bin/gmake -k all 
 gmake: Nothing to be done for 'all'.

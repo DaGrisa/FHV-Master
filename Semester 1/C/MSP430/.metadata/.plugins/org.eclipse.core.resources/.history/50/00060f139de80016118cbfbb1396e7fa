@@ -1,0 +1,46 @@
+#include <msp430fr6989.h>
+
+#define TRUE 1
+
+#define LEDRED_OUT P1OUT
+#define LEDRED_DIR P1DIR
+#define LED_RED (1 << 0)
+
+#define LEDGREEN_OUT P9OUT
+#define LEDGREEN_DIR P9DIR
+#define LED_GREEN (1 << 7)
+
+#define LEDRED_SEL P1SEL0
+#define LEDGREEN_SEL P9SEL0
+/*
+ * main.c
+ */
+int main(void) {
+	WDTCTL = WDTPW | WDTHOLD;    // Stop watchdog timer
+	PM5CTL0 &= ~LOCKLPM5;
+	LEDRED_SEL |= LED_RED;       // P1SEL0 unterdrückt Interrupts, die durch das
+                                    // ein- und Ausschalten der LED entstehen
+	// LEDGREEN_SEL |= LED_GREEN;
+
+       LEDRED_DIR |= LED_RED;
+       LEDRED_OUT |= LED_RED;
+
+       LEDGREEN_DIR |= LED_GREEN;
+       LEDGREEN_OUT |= LED_GREEN;
+
+       TA0CCR0 = 1000;  // 1ms bei 1MHz  Timer capture compare register 0
+       TA0CCR1 = TA0CCR0/4;   // Timer capture compare register 1 25% vom timer 0
+
+       TA0CCTL1 = CM_0 | OUTMOD_7; // Timer0 captureCompare CompareMode
+   				//CM_0: capture Mode disabled OUTMOD gibt an,
+   				//wie die Werte in Reg. o und 1 verwendet werden
+   				// bis 250 an, anschließend bis 1000 aus, dann von vorn
+       TA0CTL = TASSEL_2 | ID_0 | MC_1 | TACLR; // Timer 0 Conrtol
+   						 //TASSEL_2: System Clock
+   					//ID_0: Input divider - jeder clock wird gezählt
+   					// MC_1: Mode Control, MC_1 zählt bis zum Wert
+   					 // in Register 0 ( TA0CCR0)
+   					// TACLR: Timer clear
+
+       while (TRUE);
+}

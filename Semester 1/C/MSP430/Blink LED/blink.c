@@ -31,11 +31,12 @@ int main(void) {
     for(;;) {
         volatile unsigned int i;            // volatile to prevent optimization
 
-        P1OUT ^= 0x01;                      // Toggle P1.0 using exclusive-OR
+        P1OUT ^= BIT0;                      // Toggle P1.0 using exclusive-OR
 
         i = 10000;                          // SW Delay
-        do i--;
-        while(i != 0);
+        do {
+        		i--;
+        } while(i != 0);
     }
 
 }

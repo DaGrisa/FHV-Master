@@ -1,0 +1,59 @@
+#include <msp430.h> 
+#include <math.h>
+
+#define SENSOR BIT4
+
+void initialize();
+void enableInterrupt();
+void setTimer();
+void setLightSensor()
+(void) (*callbackFunction)(double);
+
+int main(void) {
+	initialize();
+	
+	int rotationCount = 0;
+	while(1){
+		if()
+	}
+
+	return 0;
+}
+
+void initialize(){
+	WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
+	PM5CTL0 &= ~LOCKLPM5;		// prevents the CPU’s internal boot code to reprogram the port pins after wakeup from low power mode with disabled CPU core
+
+	enableInterrupt();
+	enableTimer();
+	enableLightSensor();
+}
+
+void enableInterrupt(){
+	P1DIR &= SENSOR;
+	P1IN = SENSOR;
+	P1IES |= SENSOR;				// interrupt enable
+	P1IE = 0x01;					// high-to-low transition
+}
+
+void setTimer(){
+	TA0CCR0 = 1000000;			// set to 1s
+	TA0CTL = TASSEL_2 | ID_0 | MC_1 | TACLR;
+}
+
+void enableLightSensor(){
+
+}
+
+double getCurrentSpeed(double radiusInMeter, int tick, int secondsPassed){
+	double perimeter = 2*radius*PI;
+	double length = perimeter * (tick/32);
+	return length / secondsPassed;
+}
+
+#pragma vector=TIMERA0_VECTOR
+__interrupt void Timer_A (void)
+{
+	callbackFunction(getCurrentSpeed());
+	enableInterrupt();
+}

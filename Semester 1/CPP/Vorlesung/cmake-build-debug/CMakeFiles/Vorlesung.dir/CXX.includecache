@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Person.cpp
+iostream
+-
+Person.h
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Person.h
+
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Person.h
+iosfwd
+-
+
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Stack.h
+cstring
+-
+
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Student.cpp
+Student.h
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Student.h
+
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Student.h
+Person.h
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Person.h
+
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/TypedStack.h
+
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/main.cpp
+iostream
+-
+vector
+-
+Person.h
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Person.h
+Stack.h
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Stack.h
+Student.h
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/Student.h
+TypedStack.h
+/Users/daniel/FHV-Master/Semester 1/CPP/Vorlesung/TypedStack.h
+

@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Vorlesung.dir/main.cpp.o CMakeFiles/Vorlesung.dir/Person.cpp.o CMakeFiles/Vorlesung.dir/Student.cpp.o  -o Vorlesung 

@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/doublelist.c
+MacTypes.h
+-
+stdlib.h
+-
+doublelist.h
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/doublelist.h
+list.h
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/list.h
+
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/doublelist.h
+
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/intlist.c
+stdlib.h
+-
+list.h
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/list.h
+intlist.h
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/intlist.h
+
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/intlist.h
+
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/list.c
+stddef.h
+-
+list.h
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/list.h
+
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/list.h
+
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/main.c
+intlist.h
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/intlist.h
+list.h
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/list.h
+doublelist.h
+/Users/daniel/FHV-Master/Semester 1/C/GenericLinkedList/doublelist.h
+stdio.h
+-
+

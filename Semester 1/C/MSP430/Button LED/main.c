@@ -1,94 +1,56 @@
 #include <msp430.h>
-/*---------------------------------
- * define components
- —----------------------------------*/
-#define LED_RED BIT0								//P1.0
-#define LED_GREEN BIT7							//P9.7
-#define BUTTON_RED_LED BIT1						//P1.1
-#define BUTTON_GREEN_LED BIT2					//P1.2
 
-/*----------------------------------
- * define OUTPUT
- —----------------------------------*/
-#define OUTPUT1 P1OUT							//define general Output for P1
-#define OUTPUT1_DIRECTION P1DIR
-#define OUTPUT9 P9OUT
-#define OUTPUT9_DIRECTION P9DIR
+#define LED_RED BIT0
+#define LED_GREEN BIT7
+#define BUTTON BIT1 //((1<<1)|(1<<2))
 
-/*------------------------------------
- * define Buttons In and Flags
- —------------------------------------*/
-#define BUTTON_RESISTOR_ENABLE P1REN				//Resistor for Button
-#define BUTTON_INTERRUPT_ENABLE P1IE				//enables or disables interrupts for that pin
-#define BUTTON_INTERRUPT_FLAG P1IFG				//Flag if interrupt is set (0,1)
-#define BUTTON_INTERRUPT_EDGE_DIRECTION P1IES	//sets the direction of the interrupt edge
+void main(void)
+{
+    WDTCTL = WDTPW | WDTHOLD;   		 // Stop watchdog timer
+    PM5CTL0 &= ~LOCKLPM5;     			  // Disable the GPIO power-on default high-impedance mode
+                                      	// to activate previously configured port settings
 
-/*
- * Variables
- */
-static int counter = 0;
-static int buttonClicked = 0;
+    //LED
+    P1DIR |= LED_RED;    				 // Set to output direction
+    P9DIR |= LED_GREEN,
+    P1OUT = LED_RED;
+    P9OUT  &= ~LED_GREEN;
 
-int main(void) {
-	/*
-	 * general
-	 */
-	WDTCTL = WDTPW | WDTHOLD;          // Stop watchdog timer
+    //BUTTON
+    P1REN |= BUTTON;    			 //Enables a puller-Resistor on the button-pin
+    P1OUT |= BUTTON;    			 //Writes a "1" to the portpin, telling the resistor to pullup
 
-	/*
-	 * Enable LED and apply settings
-	 */
-	OUTPUT1_DIRECTION |= LED_RED;      // set P1.0 as output(1) dir
-	OUTPUT1 &= ~LED_RED;               // enable P1.0(Red Led)
+    P1IE |= BUTTON;   				 //Interrupt Enabled --> Enables the selector-mask for generating interrupts on the relevant pin
+    P1IES |= BUTTON;    			 //Triggers when you PRESS the button :: Pick one...
+   		 //P1IES &= ~BUTTON;   	 // Triggers when you RELEASE the button :: ...or pick the other
 
-	OUTPUT9_DIRECTION |= LED_GREEN;
-	OUTPUT9 &= ~LED_GREEN;
+    P1IFG &= ~BUTTON;   			 //Interrupt Flag --> clear it
 
-	PM5CTL0 &= ~LOCKLPM5;              // Disable the GPIO power-on default high-impedance mode to activate previously configured port settings
+    __enable_interrupt(); // Interrupts get enabled *here* - they were disabled thus far..
 
-	/*
-	 * Enable Button, set Flags, add Resistor
-	 */
-	OUTPUT1_DIRECTION &= ~(BUTTON_RED_LED + BUTTON_GREEN_LED);                // button is an input
-	OUTPUT1 |= (BUTTON_RED_LED + BUTTON_GREEN_LED);                           // pull-up resistor
-	BUTTON_RESISTOR_ENABLE |= (BUTTON_RED_LED + BUTTON_GREEN_LED);            // resistor enabled
-	BUTTON_INTERRUPT_EDGE_DIRECTION |= (BUTTON_RED_LED + BUTTON_GREEN_LED);   // interrupt on low-to-high transition
-	BUTTON_INTERRUPT_ENABLE |= (BUTTON_RED_LED + BUTTON_GREEN_LED);           // interrupt enable
-	BUTTON_INTERRUPT_FLAG &= ~(BUTTON_RED_LED + BUTTON_GREEN_LED);            // set interrupt flag 0
-
-	/*
-	 * Lets get the Timer working
-	 */
-	TA0CCTL0 = CCIE;                         // TACCR0 interrupt enabled
-	TA0CCR0 = 1000;                          // 16-Bit max. 65536 (1000 = 1ms@1MHz)
-	TA0CTL = TASSEL__SMCLK | MC__CONTINUOUS; // Continous -> trigger interrupt every time, timer reaches defined number
-
-	_enable_interrupt();
-
-	for (;;) {
-	}
-}
-
-#pragma vector=TIMER0_A0_VECTOR
-__interrupt void timer_interrupt(void) {
-	if (buttonClicked) {
-		if (counter >= 3) {
-			counter = 0;
-			BUTTON_INTERRUPT_ENABLE |= (BUTTON_RED_LED + BUTTON_GREEN_LED);
-			BUTTON_INTERRUPT_FLAG &= ~(BUTTON_RED_LED + BUTTON_GREEN_LED);
-			buttonClicked = 0;
-		} else {
-			counter++;
-		}
-	}
+    volatile int i;
+    for(;;) {
+   	 P9OUT ^= LED_GREEN;
+   	 P1OUT ^= LED_RED;
+   	 for(i = 0; i < 10000;++i);
+    }
 }
 
 // Port 1 interrupt service routine
 #pragma vector=PORT1_VECTOR
-__interrupt void Port_1(void) {
-	P1OUT ^= LED_RED; // P1.0 = toggle
-	P9OUT ^= LED_GREEN;
-	BUTTON_INTERRUPT_ENABLE &= ~(BUTTON_RED_LED + BUTTON_GREEN_LED);
-	buttonClicked = 1;
-	TA0CTL |= TACLR;
+__interrupt void port1_isr(void)
+{
+    //remove bouncing (prellen): = debounce TODO
+
+
+    volatile int i, j;
+    P1IFG &= ~BUTTON; // P1.3 IFG cleared
+
+    P9OUT = 0;
+    P1OUT = (LED_RED | BUTTON); // Clear the LEDs so they start in OFF state do not forget also set to interrupt otherwise it is disabled
+
+    for(j = 0; j < 10;++j){
+   	 P1OUT ^= (LED_RED);
+   	 for(i = 0; i < 10000;++i);
+    }
 }

@@ -1,0 +1,70 @@
+#include <msp430.h> 
+
+/*
+ * main.c
+ */
+void init(void);
+
+typedef enum {Dit, Dah} Signal;
+#define DIT_LENGTH_MS 60
+#define DAH_LENGTH_MS 3*DIT_LENGTH_MS
+
+static int g_secondsPassed = 0;
+
+int main(void) {
+    WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
+    PM5CTL0 &= ~LOCKLPM5;
+
+    init();
+
+    while(1){
+    		// everything will work with interrupts
+    }
+}
+
+void init(void){
+	// enable interrupt on P1.1
+	P1IE |= BIT1; // enable interrupt
+	P1IES |= BIT1; // interrupt edge select (falling edge)
+	P1IFG &= ~BIT1; // reset interrupt flag
+	_enable_interrupts();
+
+	// set pullup-resistor P1.1
+	P1REN |= BIT1;
+	P1OUT |= BIT1;
+
+	// turn red LED off
+	P1DIR |= BIT0;
+	P1OUT &= ~BIT0;
+
+	// turn green LED off
+	P9DIR |= BIT7;
+	P9OUT &= ~BIT7;
+
+	// timer count every second
+	TA0CCR0 = 1000000 / 8 / 5; // 1MHz and two /8 divider -> 1s
+	TA0CCTL0 = CCIE;
+	TA0CTL = TASSEL_2 | ID_3 | MC_1 | TACLR;
+	TA0EX0 = TAIDEX_4;
+}
+
+#pragma vector = PORT1_VECTOR
+__interrupt void port1_isr(){
+	P1IFG &= ~BIT1; // reset interrupt flag
+
+	// toggle LED and interrupt edge select
+	P1OUT ^= BIT0;
+	P1IES ^= BIT1;
+
+	// clear pause timer
+	g_secondsPassed = 0;
+	P9OUT &= ~BIT7;
+}
+
+#pragma vector = TIMER0_A0_VECTOR
+__interrupt void timerA_isr(){
+	g_secondsPassed++;
+	if(g_secondsPassed >= 10){
+		P9OUT ^= BIT7;
+	}
+}

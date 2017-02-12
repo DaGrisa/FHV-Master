@@ -1,0 +1,37 @@
+#include <msp430.h>
+
+#define LED_RED BIT0
+#define LED_DIR P1DIR
+#define LED_OUT P1OUT
+#define LED_SEL P1SEL0
+#define TRUE1
+
+
+	/* pulse width modulation = PWM
+ 	* TA0CCR0 = PWM Periode
+ 	* TA0CCR1 = PWM duty cycle, time cycle on vs.off
+ 	* TA0CTL = Timer A control set to submain clock TASSEL_1
+ 	* */
+
+int main(void) {
+    WDTCTL = WDTPW | WDTHOLD;               // Stop watchdog timer
+    PM5CTL0 &= ~LOCKLPM5;                   // Disable the GPIO power-on default high-impedance mode
+
+    LED_DIR |= LED_RED;
+    LED_SEL |= LED_RED;
+
+    TA0CCR0 = 1000;
+    TA0CCR1 = TA0CCR0 /10; 					//10% duty cycle
+    TA0CCTL1 = CM_0 | OUTMOD_7;
+    TA0CTL = TASSEL_2 | ID_0 | MC_1 | TACLR;
+
+    while(1){
+    	TA0CCR1 ^= (TA0CCR0 /8 | TA0CCR0 / 4);
+    	volatile unsigned int i;
+    	   i = 900000;                          // SW Delay
+    	   do i--;
+    	   while(i != 0);
+    }
+
+    return 0;
+}
