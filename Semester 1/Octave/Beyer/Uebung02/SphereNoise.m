@@ -1,1 +1,1 @@
-function [y] = SphereNoise(x)  y = (x' * x) + randn(1);end 
+function [y] = SphereNoise(x)  y = sum(x .* x) + randn;end 
