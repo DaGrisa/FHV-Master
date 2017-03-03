@@ -1,0 +1,1 @@
+function [y] = Ellipsoid(x)  dimensions = size(x, 1);  y = 0;    for i = 1:dimensions    y += 10^(6*(i-1)/(dimensions-1)) * x(i)^2;  end    %f = @(i, z) 10.^(6*(i-1)/(size(x, 1)-1)) * z(i) * z(i);  %y = sum(f([1:dimensions], x));end 
