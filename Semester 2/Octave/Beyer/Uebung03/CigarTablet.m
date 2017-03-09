@@ -1,0 +1,1 @@
+function [y] = CigarTablet(x)  dimensions = length(x);    % check input  if size(x,1) == 1    x = x';  end    y = x(1)^2 + sum(x(2:dimensions-1).^2) + x(dimensions)^2;end

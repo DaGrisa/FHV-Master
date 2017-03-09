@@ -1,0 +1,1 @@
+function[f] = DifferentPowers(x)    N = length(x);    % check input  if size(x,1) == 1    x = x';  end  f = sum((x(1:N)'.^2).^(1+5*((1:N)-1)/(N-1)));end % of function
