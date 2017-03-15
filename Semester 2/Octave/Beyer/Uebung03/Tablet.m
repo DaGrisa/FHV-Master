@@ -1,0 +1,1 @@
+function [y] = Tablet(x)  dimensions = length(x);    % check input  if size(x,1) == 1    x = x';  end    y = 10^6 * x(1)^2 + sum(x(2:dimensions).^2);end

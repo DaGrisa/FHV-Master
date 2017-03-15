@@ -1,0 +1,1 @@
+function [y] = HGBat(x)  dimensions = length(x);    % check input  if size(x,1) == 1    x = x';  end    y = abs(norm(x)^4 - sum(x(1:dimensions))^2)^(1/2) + 1/dimensions * ((norm(x)^2)/2 + sum(x(1:dimensions))) + 1/2;end
