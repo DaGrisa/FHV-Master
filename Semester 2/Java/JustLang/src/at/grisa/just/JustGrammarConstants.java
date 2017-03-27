@@ -11,9 +11,73 @@ public interface JustGrammarConstants {
   /** End of File. */
   int EOF = 0;
   /** RegularExpression Id. */
-  int A = 5;
+  int PROGRAMSTART = 5;
   /** RegularExpression Id. */
-  int B = 6;
+  int TYPEVOID = 6;
+  /** RegularExpression Id. */
+  int TYPEINTEGER = 7;
+  /** RegularExpression Id. */
+  int TYPEBOOLEAN = 8;
+  /** RegularExpression Id. */
+  int BYREF = 9;
+  /** RegularExpression Id. */
+  int IF = 10;
+  /** RegularExpression Id. */
+  int ELSE = 11;
+  /** RegularExpression Id. */
+  int WHILE = 12;
+  /** RegularExpression Id. */
+  int RETURN = 13;
+  /** RegularExpression Id. */
+  int LETTER = 14;
+  /** RegularExpression Id. */
+  int DIGIT = 15;
+  /** RegularExpression Id. */
+  int IDENTIFIER = 16;
+  /** RegularExpression Id. */
+  int DECIMALPOINT = 17;
+  /** RegularExpression Id. */
+  int NUMBER = 18;
+  /** RegularExpression Id. */
+  int SCOPEBEGIN = 19;
+  /** RegularExpression Id. */
+  int SCOPEEND = 20;
+  /** RegularExpression Id. */
+  int INSTRUCTIONEND = 21;
+  /** RegularExpression Id. */
+  int ALLOCATION = 22;
+  /** RegularExpression Id. */
+  int OPENBRACE = 23;
+  /** RegularExpression Id. */
+  int CLOSEBRACE = 24;
+  /** RegularExpression Id. */
+  int COMMA = 25;
+  /** RegularExpression Id. */
+  int OR = 26;
+  /** RegularExpression Id. */
+  int AND = 27;
+  /** RegularExpression Id. */
+  int EQUALS = 28;
+  /** RegularExpression Id. */
+  int EQUALSNOT = 29;
+  /** RegularExpression Id. */
+  int LESSTHAN = 30;
+  /** RegularExpression Id. */
+  int LESSTHANEQUALS = 31;
+  /** RegularExpression Id. */
+  int GREATERTHAN = 32;
+  /** RegularExpression Id. */
+  int GREATERTHANEQUALS = 33;
+  /** RegularExpression Id. */
+  int PLUS = 34;
+  /** RegularExpression Id. */
+  int MINUS = 35;
+  /** RegularExpression Id. */
+  int MULTIPLY = 36;
+  /** RegularExpression Id. */
+  int DIVIDE = 37;
+  /** RegularExpression Id. */
+  int NOT = 38;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -25,9 +89,40 @@ public interface JustGrammarConstants {
     "\"\\r\"",
     "\"\\t\"",
     "\"\\n\"",
-    "\"a\"",
-    "\"b\"",
+    "\"program\"",
+    "\"void\"",
+    "\"int\"",
+    "\"boolean\"",
+    "\"byref\"",
+    "\"if\"",
+    "\"else\"",
+    "\"while\"",
+    "\"return\"",
+    "<LETTER>",
+    "<DIGIT>",
+    "<IDENTIFIER>",
+    "\".\"",
+    "<NUMBER>",
+    "\"{\"",
+    "\" }\"",
     "\";\"",
+    "\"=\"",
+    "\"(\"",
+    "\")\"",
+    "\",\"",
+    "\"||\"",
+    "\"&&\"",
+    "\"==\"",
+    "\"!=\"",
+    "\"<\"",
+    "\"<=\"",
+    "\">\"",
+    "\">=\"",
+    "\"+\"",
+    "\"-\"",
+    "\"*\"",
+    "\"/\"",
+    "\"!\"",
   };
 
 }

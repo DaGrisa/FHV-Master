@@ -1,0 +1,154 @@
+PARSER_BEGIN(JustParser)
+package com.arnorie;
+
+public class JustParser {
+}
+PARSER_END(JustParser)
+
+TOKEN: {
+// keywords
+    <PROGRAM: "program">
+|   <BYREF: "byref">
+|   <IF: "if">
+|   <ELSE: "else">
+|   <WHILE: "while">
+|   <RETURN: "return">
+
+// types
+|   <VOID: "void">
+|   <INT: "int">
+|   <BOOLEAN: "boolean">
+
+|   <BRACE_O: "{">
+|   <BRACE_C: "}">
+|   <PAR_O: "(">
+|   <PAR_C: ")">
+|   <SEMICOlON: ";">
+|   <COMMA: ",">
+|   <ASSIGN: "=">
+
+// relational operators
+|   <EQUAL: "==">
+|   <N_EQUAL: "!=">
+|   <LT: "<">
+|   <LT_EQ: "<=">
+|   <GT: ">">
+|   <GT_EQ: ">=">
+|   <NOT: "!">
+
+// logical operators
+|   <OR: "||">
+|   <AND: "&&">
+
+// math operators
+|   <PLUS: "+">
+|   <MINUS: "-">
+|   <MULTIIPLY: "*">
+|   <DIVIDE: "/">
+
+// literals
+|   <#LETTER: ["A"-"Z", "a"-"z"]>
+|   <#DIGIT: ["0"-"9"]>
+|   <IDENT: <LETTER> (<LETTER> | <DIGIT>)*>
+|   <NUMBER: (<DIGIT>)+>
+}
+
+void parse() : {} {
+    <PROGRAM> <IDENT> <BRACE_O> definition() <BRACE_C>
+}
+
+void definition() : {} {
+    (varDef() | funcDef())*
+}
+
+void varDef() : {} {
+    type() <IDENT> [init()] <SEMICOlON>
+}
+
+void init() : {} {
+    <ASSIGN> <IDENT>
+}
+
+void type() : {} {
+    <VOID> | <INT> | <BOOLEAN>
+}
+
+void funcDef() : {} {
+    funcHead() block()
+}
+
+void funcHead() : {} {
+    type() <IDENT> <PAR_O> [formParList()] <PAR_C>
+}
+
+void formParList() : {} {
+    [ <BYREF> ] type() <IDENT> (<COMMA> [ <BYREF> ] type() <IDENT>)*
+}
+
+void block() : {} {
+    <BRACE_O> (varDef() | stat()) <BRACE_C>
+}
+
+void stat() : {} {
+    assignStat() | callStat() | ifStat() | whileStat() | returnStat() | block() | <SEMICOlON>
+}
+
+void assignStat() : {} {
+    <IDENT> <ASSIGN> expr() <SEMICOlON>
+}
+
+void callStat() : {} {
+    call() <SEMICOlON>
+}
+
+void call() : {} {
+    <IDENT> <PAR_O> [actParList()] <PAR_C>
+}
+
+void actParList() : {} {
+    expr() [ <COMMA> expr() ]
+}
+
+void ifStat() : {} {
+    <IF> <PAR_O> expr() <PAR_C> stat() [<ELSE> stat()]
+}
+
+void whileStat() : {} {
+    <WHILE> <PAR_O> expr() <PAR_C> stat()
+}
+
+void returnStat() : {} {
+    <RETURN> [expr()] <SEMICOlON>
+}
+
+void expr() : {} {
+    orExpr()
+}
+
+void orExpr() : {} {
+    andExpr() [<OR> andExpr()]
+}
+
+void andExpr() : {} {
+    relExpr() [<AND> relExpr()]
+}
+
+void relExpr() : {} {
+    simpleExpr() [(<EQUAL> | <N_EQUAL> | <LT> | <LT_EQ> | <GT> | <GT_EQ>) simpleExpr()]
+}
+
+void simpleExpr() : {} {
+    [<PLUS> | <MINUS>] term() ([<PLUS> | <MINUS>] term())*
+}
+
+void term() : {} {
+    notFact() ((<MULTIIPLY> | <DIVIDE>) notFact())*
+}
+
+void notFact() : {} {
+    [<NOT>] fact()
+}
+
+void fact() : {} {
+    <NUMBER> | <IDENT> [<PAR_O> [actParList()] <PAR_C>] | <PAR_O> expr() <PAR_C>
+}

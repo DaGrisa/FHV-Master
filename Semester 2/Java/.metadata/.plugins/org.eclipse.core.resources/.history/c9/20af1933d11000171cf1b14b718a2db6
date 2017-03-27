@@ -1,0 +1,365 @@
+/**
+ * JavaCC template file created by SF JavaCC plugin 1.5.28+ wizard for JavaCC 1.5.0+
+ */
+options
+{
+  static = false;
+}
+
+PARSER_BEGIN(JustGrammar)
+package at.grisa.just;
+
+import java.io.InputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class JustGrammar
+{
+  public static void main(String args []) throws Exception
+  {
+    
+	System.out.println("Reading from file...");
+	InputStream content = Files.asByteSource(Paths.get("resources/program.jl")).getStream();
+	JustGrammar parser = new JustGrammar(content);
+	parser.start();
+    
+    /*while (true)
+    {
+      System.out.println("Reading from standard input...");
+      System.out.print("Enter an expression like \"a(b)*;\" :");
+      try
+      {
+        switch (parser.one_line())
+        {
+          case 0 : 
+          System.out.println("OK.");
+          break;
+          case 1 : 
+          System.out.println("Goodbye.");
+          break;
+          default : 
+          break;
+        }
+      }
+      catch (Exception e)
+      {
+        System.out.println("NOK.");
+        System.out.println(e.getMessage());
+        break;
+      }
+      catch (Error e)
+      {
+        System.out.println("Oops.");
+        System.out.println(e.getMessage());
+        break;
+      }
+    }*/
+  }
+}
+
+PARSER_END(JustGrammar)
+
+SKIP :
+{
+  " "
+| "\r"
+| "\t"
+| "\n"
+}
+
+TOKEN : /* KEYWORDS */
+{
+  < PROGRAMSTART : "program" >
+| < TYPEVOID : "void" >
+| < TYPEINTEGER : "int" >
+| < TYPEBOOLEAN : "boolean" >
+| < BYREF : "byref" >
+| < IF : "if" >
+| < ELSE : "else" >
+| < WHILE : "while" >
+| < RETURN : "return" >
+}
+
+TOKEN : /* IDENTIFIER */
+{
+  < #LETTER : [ "A"-"Z", "a"-"z" ] >
+| < #DIGIT : [ "0"-"9" ] >
+| < IDENTIFIER :
+    < LETTER >
+    (
+      < LETTER >
+    | < DIGIT >
+    )* >
+}
+
+TOKEN : /* NUMBER */
+{
+  < #DECIMALPOINT : "." >
+| < NUMBER :
+    < DIGIT >
+    (
+      (< DIGIT >)*
+    |
+      (
+        (< DIGIT >)* < DECIMALPOINT > (< DIGIT >)*
+      )
+    ) >
+}
+
+TOKEN : /* SYMBOLS */
+{
+  < SCOPEBEGIN : "{" >
+| < SCOPEEND : " }" >
+| < INSTRUCTIONEND : ";" >
+| < ALLOCATION : "=" >
+| < OPENBRACE : "(" >
+| < CLOSEBRACE : ")" >
+| < COMMA : "," >
+| < OR : "||" >
+| < AND : "&&" >
+}
+
+TOKEN : /* OPERATORS */
+{
+  < EQUALS : "==" >
+| < EQUALSNOT : "!=" >
+| < LESSTHAN : "<" >
+| < LESSTHANEQUALS : "<=" >
+| < GREATERTHAN : ">" >
+| < GREATERTHANEQUALS : ">=" >
+| < PLUS : "+" >
+| < MINUS : "-" >
+| < MULTIPLY : "*" >
+| < DIVIDE : "/" >
+| < NOT : "!" >
+}
+
+int start() :
+{}
+{
+  compilationUnit()
+  {
+    return 0;
+  }
+|
+  {
+    return 1;
+  }
+}
+
+void compilationUnit() :
+{}
+{
+  < PROGRAMSTART > < IDENTIFIER > < SCOPEBEGIN > definition() < SCOPEEND >
+}
+
+void definition() :
+{}
+{
+  type() < IDENTIFIER >
+  (
+    variableDefinition()
+  | functionDefinition()
+  )
+}
+
+void variableDefinition() :
+{}
+{
+  [ init() ] < INSTRUCTIONEND >
+}
+
+void init() :
+{}
+{
+  < ALLOCATION > < NUMBER >
+}
+
+void type() :
+{}
+{
+  < TYPEVOID >
+| < TYPEINTEGER >
+| < TYPEBOOLEAN >
+}
+
+void functionDefinition() :
+{}
+{
+  functionHead() block()
+}
+
+void functionHead() :
+{}
+{
+  < OPENBRACE > [ formalParameterList() ] < CLOSEBRACE >
+}
+
+void formalParameterList() :
+{}
+{
+  [ < BYREF > ] type() < IDENTIFIER >
+  (
+    < COMMA > [ < BYREF > ] type() < IDENTIFIER >
+  )*
+}
+
+void block() :
+{}
+{
+  < SCOPEBEGIN >
+  (
+    variableDefinition()
+  | statement()
+  < INSTRUCTIONEND >
+  )*
+  < SCOPEEND >
+}
+
+void statement() :
+{}
+{
+  < IDENTIFIER >
+  (
+    assignStatement()
+  | callStatement()
+  )
+| ifStatement()
+| whileStatement()
+| returnStatement()
+| block()
+}
+
+void assignStatement() :
+{}
+{
+  < ALLOCATION > expression()
+}
+
+void callStatement() :
+{}
+{
+  call()
+}
+
+void call() :
+{}
+{
+  < OPENBRACE > [ actualParameterList() ] < CLOSEBRACE >
+}
+
+void actualParameterList() :
+{}
+{
+  expression()
+  (
+    < COMMA > expression()
+  )*
+}
+
+void ifStatement() :
+{}
+{
+  < IF > < OPENBRACE > expression() < CLOSEBRACE > statement() //[ < ELSE > statement() ]
+}
+
+void whileStatement() :
+{}
+{
+  < WHILE > < OPENBRACE > expression() < CLOSEBRACE > statement()
+}
+
+void returnStatement() :
+{}
+{
+  < RETURN > [ expression() ] < INSTRUCTIONEND >
+}
+
+void expression() :
+{}
+{
+  orExpression()
+}
+
+void orExpression() :
+{}
+{
+  andExpression()
+  (
+    < OR > andExpression()
+  )*
+}
+
+void andExpression() :
+{}
+{
+  relExpression()
+  (
+    < AND > relExpression()
+  )*
+}
+
+void relExpression() :
+{}
+{
+  simpleExpression()
+  [
+    (
+      < EQUALS >
+    | < EQUALSNOT >
+    | < LESSTHAN >
+    | < LESSTHANEQUALS >
+    | < GREATERTHAN >
+    | < GREATERTHANEQUALS >
+    )
+    simpleExpression()
+  ]
+}
+
+void simpleExpression() :
+{}
+{
+  [
+    < PLUS >
+  | < MINUS >
+  ]
+  term()
+  (
+    (
+      < PLUS >
+    | < MINUS >
+    )
+    term()
+  )*
+}
+
+void term() :
+{}
+{
+  notFact()
+  (
+    (
+      < MULTIPLY >
+    | < DIVIDE >
+    )
+    notFact()
+  )*
+}
+
+void notFact() :
+{}
+{
+  [ < NOT > ] fact()
+}
+
+void fact() :
+{}
+{
+  < NUMBER >
+| < IDENTIFIER >
+  [
+    < OPENBRACE > [ actualParameterList() ] < CLOSEBRACE >
+  ]
+| < OPENBRACE > expression() < CLOSEBRACE >
+}
