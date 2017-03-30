@@ -8,7 +8,6 @@ options
 
 PARSER_BEGIN(JustGrammar)
 package at.grisa.just;
-
 import java.io.InputStream;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,12 +17,20 @@ public class JustGrammar
 {
   public static void main(String args []) throws Exception
   {
-    
-	System.out.println("Reading from file...");
-	InputStream content = Files.newInputStream(Paths.get("resources/program.jl"));
-	JustGrammar parser = new JustGrammar(content);
-	parser.start();
-    
+    System.out.println("Reading from file...");
+    InputStream content = Files.newInputStream(Paths.get("resources/program.jl"));
+    JustGrammar parser = new JustGrammar(content);
+    switch (parser.start())
+    {
+      case 0 : 
+      System.out.println("OK.");
+      break;
+      case 1 : 
+      System.out.println("Goodbye.");
+      break;
+      default : 
+      break;
+    }
     /*while (true)
     {
       System.out.println("Reading from standard input...");
@@ -79,6 +86,8 @@ TOKEN : /* KEYWORDS */
 | < ELSE : "else" >
 | < WHILE : "while" >
 | < RETURN : "return" >
+| < TRUE : "true" >
+| < FALSE : "false" >
 }
 
 TOKEN : /* IDENTIFIER */
@@ -110,7 +119,7 @@ TOKEN : /* NUMBER */
 TOKEN : /* SYMBOLS */
 {
   < SCOPEBEGIN : "{" >
-| < SCOPEEND : " }" >
+| < SCOPEEND : "}" >
 | < INSTRUCTIONEND : ";" >
 | < ALLOCATION : "=" >
 | < OPENBRACE : "(" >
@@ -157,11 +166,13 @@ void compilationUnit() :
 void definition() :
 {}
 {
-  type() < IDENTIFIER >
   (
-    variableDefinition()
-  | functionDefinition()
-  )
+    type() < IDENTIFIER >
+    (
+      variableDefinition()
+    | functionDefinition()
+    )
+  )*
 }
 
 void variableDefinition() :
@@ -173,7 +184,19 @@ void variableDefinition() :
 void init() :
 {}
 {
-  < ALLOCATION > < NUMBER >
+  < ALLOCATION >
+  (
+    < NUMBER >
+  | booleanValue()
+  )
+}
+
+void booleanValue() :
+{
+}
+{
+  < TRUE >
+| < FALSE >
 }
 
 void type() :
@@ -210,9 +233,8 @@ void block() :
 {
   < SCOPEBEGIN >
   (
-    variableDefinition()
+    type() < IDENTIFIER > variableDefinition()
   | statement()
-  < INSTRUCTIONEND >
   )*
   < SCOPEEND >
 }
@@ -229,6 +251,7 @@ void statement() :
 | whileStatement()
 | returnStatement()
 | block()
+| < INSTRUCTIONEND >
 }
 
 void assignStatement() :

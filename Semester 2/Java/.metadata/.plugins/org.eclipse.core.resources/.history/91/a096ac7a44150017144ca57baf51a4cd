@@ -20,17 +20,7 @@ public class JustGrammar
     System.out.println("Reading from file...");
     InputStream content = Files.newInputStream(Paths.get("resources/program.jl"));
     JustGrammar parser = new JustGrammar(content);
-    switch (parser.start())
-    {
-      case 0 : 
-      System.out.println("OK.");
-      break;
-      case 1 : 
-      System.out.println("Goodbye.");
-      break;
-      default : 
-      break;
-    }
+    parser.start();
     /*while (true)
     {
       System.out.println("Reading from standard input...");
@@ -187,17 +177,14 @@ void init() :
   < ALLOCATION >
   (
     < NUMBER >
-  | booleanValue()
+  | boolean()
   )
 }
 
-void booleanValue() :
+void boolean() :
 {
-}
-{
-  < TRUE >
-| < FALSE >
-}
+} {
+  < TRUE > | < FALSE >}
 
 void type() :
 {}
@@ -234,7 +221,8 @@ void block() :
   < SCOPEBEGIN >
   (
     type() < IDENTIFIER > variableDefinition()
-  | statement()
+  | statement() 
+    < INSTRUCTIONEND >
   )*
   < SCOPEEND >
 }
@@ -251,7 +239,6 @@ void statement() :
 | whileStatement()
 | returnStatement()
 | block()
-| < INSTRUCTIONEND >
 }
 
 void assignStatement() :

@@ -1,0 +1,5 @@
+program EmJavaPrg {
+	int globalVal;
+	
+
+}

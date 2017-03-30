@@ -29,55 +29,59 @@ public interface JustGrammarConstants {
   /** RegularExpression Id. */
   int RETURN = 13;
   /** RegularExpression Id. */
-  int LETTER = 14;
+  int TRUE = 14;
   /** RegularExpression Id. */
-  int DIGIT = 15;
+  int FALSE = 15;
   /** RegularExpression Id. */
-  int IDENTIFIER = 16;
+  int LETTER = 16;
   /** RegularExpression Id. */
-  int DECIMALPOINT = 17;
+  int DIGIT = 17;
   /** RegularExpression Id. */
-  int NUMBER = 18;
+  int IDENTIFIER = 18;
   /** RegularExpression Id. */
-  int SCOPEBEGIN = 19;
+  int DECIMALPOINT = 19;
   /** RegularExpression Id. */
-  int SCOPEEND = 20;
+  int NUMBER = 20;
   /** RegularExpression Id. */
-  int INSTRUCTIONEND = 21;
+  int SCOPEBEGIN = 21;
   /** RegularExpression Id. */
-  int ALLOCATION = 22;
+  int SCOPEEND = 22;
   /** RegularExpression Id. */
-  int OPENBRACE = 23;
+  int INSTRUCTIONEND = 23;
   /** RegularExpression Id. */
-  int CLOSEBRACE = 24;
+  int ALLOCATION = 24;
   /** RegularExpression Id. */
-  int COMMA = 25;
+  int OPENBRACE = 25;
   /** RegularExpression Id. */
-  int OR = 26;
+  int CLOSEBRACE = 26;
   /** RegularExpression Id. */
-  int AND = 27;
+  int COMMA = 27;
   /** RegularExpression Id. */
-  int EQUALS = 28;
+  int OR = 28;
   /** RegularExpression Id. */
-  int EQUALSNOT = 29;
+  int AND = 29;
   /** RegularExpression Id. */
-  int LESSTHAN = 30;
+  int EQUALS = 30;
   /** RegularExpression Id. */
-  int LESSTHANEQUALS = 31;
+  int EQUALSNOT = 31;
   /** RegularExpression Id. */
-  int GREATERTHAN = 32;
+  int LESSTHAN = 32;
   /** RegularExpression Id. */
-  int GREATERTHANEQUALS = 33;
+  int LESSTHANEQUALS = 33;
   /** RegularExpression Id. */
-  int PLUS = 34;
+  int GREATERTHAN = 34;
   /** RegularExpression Id. */
-  int MINUS = 35;
+  int GREATERTHANEQUALS = 35;
   /** RegularExpression Id. */
-  int MULTIPLY = 36;
+  int PLUS = 36;
   /** RegularExpression Id. */
-  int DIVIDE = 37;
+  int MINUS = 37;
   /** RegularExpression Id. */
-  int NOT = 38;
+  int MULTIPLY = 38;
+  /** RegularExpression Id. */
+  int DIVIDE = 39;
+  /** RegularExpression Id. */
+  int NOT = 40;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -98,13 +102,15 @@ public interface JustGrammarConstants {
     "\"else\"",
     "\"while\"",
     "\"return\"",
+    "\"true\"",
+    "\"false\"",
     "<LETTER>",
     "<DIGIT>",
     "<IDENTIFIER>",
     "\".\"",
     "<NUMBER>",
     "\"{\"",
-    "\" }\"",
+    "\"}\"",
     "\";\"",
     "\"=\"",
     "\"(\"",

@@ -1471,3 +1471,13 @@ org.eclipse.jface.text.BadLocationException
 	at sf.eclipse.javacc.editors.TextHover.getHoverInfo2(TextHover.java:104)
 	at sf.eclipse.javacc.editors.TextHover.getHoverInfo2(TextHover.java:1)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2017-03-30 13:57:31.716 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/daniel/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2017-03-30 13:57:38.973
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
