@@ -49,3 +49,4 @@ tmp/
 local.properties
 .settings/
 .loadpath
+.recommenders
