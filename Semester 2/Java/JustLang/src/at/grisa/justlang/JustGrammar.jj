@@ -12,17 +12,25 @@ import java.io.InputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import at.grisa.justlang.symbol.*;
+import at.grisa.justlang.scope.*;
 
 public class JustGrammar
 {
-  public static void main(String args []) throws Exception
+  SymbolTable symbolTable;
+  Scope currentScope;
+
+  public static void readFile(String fileName) throws IOException, ParseException
   {
     System.out.println("Reading from file...");
-    InputStream content = Files.newInputStream(Paths.get("resources/program.jl"));
+    InputStream content = Files.newInputStream(Paths.get(fileName));
     JustGrammar parser = new JustGrammar(content);
+    Scope startScope = new Scope(0);
+    parser.currentScope = startScope;
+    parser.symbolTable = startScope.localSymbols;
     switch (parser.start())
     {
-      case 0 : 
+      case 0 :
       System.out.println("OK.");
       break;
       case 1 : 
@@ -31,37 +39,26 @@ public class JustGrammar
       default : 
       break;
     }
-    /*while (true)
-    {
-      System.out.println("Reading from standard input...");
-      System.out.print("Enter an expression like \"a(b)*;\" :");
-      try
-      {
-        switch (parser.one_line())
-        {
-          case 0 : 
-          System.out.println("OK.");
-          break;
-          case 1 : 
-          System.out.println("Goodbye.");
-          break;
-          default : 
-          break;
-        }
-      }
-      catch (Exception e)
-      {
-        System.out.println("NOK.");
-        System.out.println(e.getMessage());
-        break;
-      }
-      catch (Error e)
-      {
-        System.out.println("Oops.");
-        System.out.println(e.getMessage());
-        break;
-      }
-    }*/
+  }
+
+  public static void enterScope(JustGrammar parser)
+  {
+    Scope newScope = new Scope(parser.currentScope.level++);
+    newScope.outerScope = parser.currentScope;
+    parser.currentScope = newScope;
+    parser.symbolTable = newScope.localSymbols;
+  }
+
+  public static void leaveScope(JustGrammar parser)
+  {
+    Scope newScope = parser.currentScope.outerScope;
+    parser.currentScope = newScope;
+    parser.symbolTable = newScope.localSymbols;
+  }
+
+  public static void main(String args []) throws Exception
+  {
+    readFile("resources/program.jl");
   }
 }
 
@@ -164,51 +161,101 @@ void compilationUnit() :
 }
 
 void definition() :
-{}
+{
+  Token token;
+  Type type;
+}
 {
   (
-    type() < IDENTIFIER >
+    type = type() token = < IDENTIFIER >
+    {
+      Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type);
+    }
+    // add to namelist
     (
-      variableDefinition()
-    | functionDefinition()
+      variableDefinition(newSymbol)
+    | functionDefinition(newSymbol)
     )
   )*
 }
 
-void variableDefinition() :
-{}
+void variableDefinition(Symbol symbol) :
 {
-  [ init() ] < INSTRUCTIONEND >
+  symbol.kind = Symbol.Kind.VARIABLE;
+}
+{
+  [ symbol = init(symbol) ]
+  {
+    symbolTable.insert(symbol);
+  }
+  < INSTRUCTIONEND >
 }
 
-void init() :
-{}
+Symbol init(Symbol symbol) :
+{
+  Token token;
+}
 {
   < ALLOCATION >
   (
-    < NUMBER >
-  | booleanValue()
+    token = < NUMBER >
+    {
+      Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, Integer.parseInt(token.image), Type.INT);
+      newSymbol.kind = Symbol.Kind.CONSTANT;
+      symbolTable.insert(newSymbol);
+      symbol.value = Integer.parseInt(token.image);
+      symbol.isInitialized = true;
+      return symbol;
+    }
+  | symbol = booleanValue(symbol)
+    {
+      return symbol;
+    }
   )
 }
 
-void booleanValue() :
-{
-}
+Symbol booleanValue(Symbol symbol) :
+{}
 {
   < TRUE >
+  {
+    symbol.value = Boolean.TRUE;
+    symbol.isInitialized = true;
+    return symbol;
+  }
 | < FALSE >
+  {
+    symbol.value = Boolean.FALSE;
+    symbol.isInitialized = true;
+    return symbol;
+  }
 }
 
-void type() :
-{}
+Type type() :
+{
+  Type type;
+}
 {
   < TYPEVOID >
+  {
+    return Type.VOID;
+  }
 | < TYPEINTEGER >
+  {
+    return Type.INT;
+  }
 | < TYPEBOOLEAN >
+  {
+    return Type.BOOL;
+  }
 }
 
-void functionDefinition() :
-{}
+void functionDefinition(Symbol symbol) :
+{
+  symbol.kind = Symbol.Kind.FUNCTION;
+  symbol.isDefined = true;
+  symbolTable.insert(symbol);
+}
 {
   functionHead() block()
 }
@@ -220,23 +267,49 @@ void functionHead() :
 }
 
 void formalParameterList() :
-{}
 {
-  [ < BYREF > ] type() < IDENTIFIER >
+  Token token;
+  Type type;
+}
+{
+  [ < BYREF > ] type = type() token = < IDENTIFIER >
+  {
+    Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type);
+    newSymbol.kind = Symbol.Kind.PARAMETER;
+    symbolTable.insert(newSymbol);
+  }
   (
-    < COMMA > [ < BYREF > ] type() < IDENTIFIER >
+    < COMMA > [ < BYREF > ] type = type() token = < IDENTIFIER >
+    {
+      Symbol newSymbolAdditional = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type);
+      newSymbolAdditional.kind = Symbol.Kind.PARAMETER;
+      symbolTable.insert(newSymbolAdditional);
+    }
   )*
 }
 
 void block() :
-{}
 {
+  Token token;
+  Type type;
+}
+{
+  {
+    JustGrammar.enterScope(this);
+  }
   < SCOPEBEGIN >
   (
-    type() < IDENTIFIER > variableDefinition()
+    type = type() token = < IDENTIFIER >
+    {
+      Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type);
+    }
+    variableDefinition(newSymbol)
   | statement()
   )*
   < SCOPEEND >
+  {
+    JustGrammar.leaveScope(this);
+  }
 }
 
 void statement() :
