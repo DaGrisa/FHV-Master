@@ -1,0 +1,1 @@
+function[sum] = OneMax(y)  sum = 0;  N = length(y);    for i=1:N    sum = sum + y(i);   endend

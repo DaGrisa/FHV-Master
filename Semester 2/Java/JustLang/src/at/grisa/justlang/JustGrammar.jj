@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import at.grisa.justlang.symbol.*;
+import at.grisa.justlang.generator.*;
 import at.grisa.justlang.scope.*;
 
 public class JustGrammar
@@ -30,7 +31,7 @@ public class JustGrammar
     parser.symbolTable = startScope.localSymbols;
     switch (parser.start())
     {
-      case 0 :
+      case 0 : 
       System.out.println("OK.");
       break;
       case 1 : 
@@ -43,7 +44,7 @@ public class JustGrammar
 
   public static void enterScope(JustGrammar parser)
   {
-    Scope newScope = new Scope(parser.currentScope.level++);
+    Scope newScope = new Scope(++parser.currentScope.level);
     newScope.outerScope = parser.currentScope;
     parser.currentScope = newScope;
     parser.symbolTable = newScope.localSymbols;
@@ -169,7 +170,7 @@ void definition() :
   (
     type = type() token = < IDENTIFIER >
     {
-      Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type);
+      Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type, currentScope.level);
     }
     // add to namelist
     (
@@ -187,6 +188,16 @@ void variableDefinition(Symbol symbol) :
   [ symbol = init(symbol) ]
   {
     symbolTable.insert(symbol);
+    Descriptor.Kind descriptorKind;
+    if (currentScope.level == 0)
+    {
+      descriptorKind = Descriptor.Kind.CONSTANT;
+    }
+    else
+    {
+      descriptorKind = Descriptor.Kind.LOCAL;
+    }
+    Descriptor descriptor = DescriptorFactory.getInstance().createDescriptor(symbol, descriptorKind);
   }
   < INSTRUCTIONEND >
 }
@@ -200,7 +211,7 @@ Symbol init(Symbol symbol) :
   (
     token = < NUMBER >
     {
-      Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, Integer.parseInt(token.image), Type.INT);
+      Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, Integer.parseInt(token.image), Type.INT, currentScope.level);
       newSymbol.kind = Symbol.Kind.CONSTANT;
       symbolTable.insert(newSymbol);
       symbol.value = Integer.parseInt(token.image);
@@ -274,16 +285,20 @@ void formalParameterList() :
 {
   [ < BYREF > ] type = type() token = < IDENTIFIER >
   {
-    Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type);
+    Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type, currentScope.level);
     newSymbol.kind = Symbol.Kind.PARAMETER;
     symbolTable.insert(newSymbol);
+    Descriptor.Kind descriptorKind = Descriptor.Kind.LOCAL;
+    Descriptor descriptor = DescriptorFactory.getInstance().createDescriptor(newSymbol, descriptorKind);
   }
   (
     < COMMA > [ < BYREF > ] type = type() token = < IDENTIFIER >
     {
-      Symbol newSymbolAdditional = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type);
+      Symbol newSymbolAdditional = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type, currentScope.level);
       newSymbolAdditional.kind = Symbol.Kind.PARAMETER;
       symbolTable.insert(newSymbolAdditional);
+      Descriptor.Kind descriptorKindAdditional = Descriptor.Kind.LOCAL;
+      Descriptor descriptorAdditional = DescriptorFactory.getInstance().createDescriptor(newSymbolAdditional, descriptorKindAdditional);
     }
   )*
 }
@@ -301,7 +316,7 @@ void block() :
   (
     type = type() token = < IDENTIFIER >
     {
-      Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type);
+      Symbol newSymbol = SymbolFactory.getInstance().createVariableSymbol(token.image, null, type, currentScope.level);
     }
     variableDefinition(newSymbol)
   | statement()

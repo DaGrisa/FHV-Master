@@ -11,7 +11,11 @@ public class Scope {
 	public int level;
 
 	public Scope(int level) {
-		localSymbols = new SymbolTable();
+		int globalIndexCounter = 0;
+		if(outerScope != null){
+			globalIndexCounter = localSymbols.getGlobalIndexCounter();
+		}
+		localSymbols = new SymbolTable(globalIndexCounter);
 		this.level = level;
 		System.out.println("new scope: Scope level " + this.level);
 	}

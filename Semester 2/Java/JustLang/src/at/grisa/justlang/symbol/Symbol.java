@@ -10,7 +10,7 @@ public class Symbol {
 	public Type type; // data type
 	public boolean isInitialized; // is init? for vars only
 	public Object value; // for constants and initialized vars only 
-	public int address; //for globals, params, consts and local vars
+	public int index; //for globals, params, consts and local vars
 	
 	// for functions only
 	public boolean isDefined; // is func already defined
@@ -20,6 +20,6 @@ public class Symbol {
 	@Override
 	public String toString() {
 		return "Symbol [name=" + name + ", kind=" + kind + ", type=" + type + ", isInitialized=" + isInitialized
-				+ ", value=" + value + ", address=" + address + ", isDefined=" + isDefined + ", level=" + level + "]";
+				+ ", value=" + value + ", index=" + index + ", isDefined=" + isDefined + ", level=" + level + "]";
 	}
 }
