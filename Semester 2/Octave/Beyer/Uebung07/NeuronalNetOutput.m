@@ -1,0 +1,1 @@
+function class = NeuronalNetOutput(weightMatrix, vector)  currentPhi = [vector;1]; % add threshold  [maximum, class] = max(weightMatrix'*currentPhi);end
