@@ -1,0 +1,1 @@
+function W = MadalinePseudoinverse(X,D)%X: made of K feature row vectors of dimension M% D: made of K target row vectors of dimension N% output W: N columns weight vectors, the M+1st component is w_0  [K,M] = size(X);  xe = [X, ones(K,1)];  W = pinv(xe)*D;end
